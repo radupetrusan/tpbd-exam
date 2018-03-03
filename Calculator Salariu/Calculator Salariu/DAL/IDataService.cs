@@ -15,7 +15,7 @@ namespace Calculator_Salariu.DAL
 
         int ModificaParolaParametrii(string parolaNoua, string parolaActuala);
 
-        void ModificaSalariat(Salariat salariat);
+        int ModificaSalariat(Salariat salariat);
 
         int StergeSalariat(Salariat salariat);
     }

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataService.cs" />
+    <Compile Include="DAL\IDataService.cs" />
     <Compile Include="DAL\Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -153,10 +154,15 @@
       <LastGenOutput>Model.cs</LastGenOutput>
       <DependentUpon>Model.edmx</DependentUpon>
     </Content>
+    <Content Include="Scripts\Stored Procedures\CalculeazaSumeSalarii.sql" />
+    <Content Include="Scripts\Triggers\ParametriiUpdate.sql" />
+    <Content Include="Scripts\Triggers\SalariatiInsert.sql" />
+    <Content Include="Scripts\Triggers\SalariatiUpdate.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

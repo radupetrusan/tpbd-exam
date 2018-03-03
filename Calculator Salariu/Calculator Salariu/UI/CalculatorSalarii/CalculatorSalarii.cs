@@ -140,6 +140,37 @@ namespace Calculator_Salariu
             SyncDataEvidenta();
         }
 
+        private void cautareTextBox_TextChanged(object sender, EventArgs e)
+        {
+            CalculatorViewModel.Filtru = cautareTextBox.Text.ToLower();
+            CalculatorViewModel.Filtrare();
+            SyncDataEvidenta();
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            CalculatorViewModel.IncarcaSalariatii();
+            SyncDataEvidenta();
+        }
+
+        private void salveazaModificarileButton_Click(object sender, EventArgs e)
+        {
+            foreach (Salariat salariat in salariatBindingSource)
+            {
+                CalculatorViewModel.ModificaSalariat(salariat);
+            }
+
+            cautareTextBox.Text = "";
+            CalculatorViewModel.Filtru = "";
+            CalculatorViewModel.IncarcaSalariatii();
+            SyncDataEvidenta();
+        }
+
+        private void tiparireFluturasButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion Events
 
         #region Private Functionality
@@ -170,7 +201,7 @@ namespace Calculator_Salariu
         {
             salariatBindingSource.Clear();
 
-            CalculatorViewModel.Salariati.ForEach(s => salariatBindingSource.Add(s));
+            CalculatorViewModel.SalariatiFiltrati.ForEach(s => salariatBindingSource.Add(s));
         }
 
         private void SyncDataDetaliiSalariat(Salariat salariat)
@@ -186,6 +217,8 @@ namespace Calculator_Salariu
             numeLabel.Text = (salariat.Nume != null ? salariat.Nume.ToUpper() : "") + " " + (salariat.Prenume ?? "");
             functieLabel.Text = salariat.Functie ?? "";
 
+            tableLayoutPanel1.Visible = false;
+
             salariuLabel.Text = salariat.SalariuBaza + " RON";
             sporLabel.Text = salariat.ProcentSpor + " RON";
             premiiBruteLabel.Text = salariat.PremiiBrute + " RON";
@@ -196,6 +229,8 @@ namespace Calculator_Salariu
             cassLabel.Text = (salariat.CASS ?? 0) + " RON";
             retineriLabel.Text = salariat.Retineri + " RON";
             viratCardLabel.Text = (salariat.ViratCard ?? 0) + " RON";
+
+            tableLayoutPanel1.Visible = true;
         }
 
 

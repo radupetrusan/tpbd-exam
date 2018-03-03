@@ -35,17 +35,35 @@ namespace Calculator_Salariu.DAL
             }
         }
 
-        public void ModificaSalariat(Salariat salariat)
+        public int ModificaSalariat(Salariat salariat)
         {
             using (var model = new ModelContainer())
             {
-                var salariatExistent = model.Salariati.FirstOrDefault(s => s.Nr_crt == salariat.Nr_crt);
-
-                if (salariatExistent != null)
+                try
                 {
-                    salariatExistent = salariat;
-                    model.SaveChanges();
+                    var salariatExistent = model.Salariati.FirstOrDefault(s => s.Nr_crt == salariat.Nr_crt);
+
+                    if (salariatExistent != null)
+                    {
+                        salariatExistent.Nume = salariat.Nume;
+                        salariatExistent.Prenume = salariat.Prenume;
+                        salariatExistent.Functie = salariat.Functie;
+
+                        salariatExistent.SalariuBaza = salariat.SalariuBaza;
+                        salariatExistent.ProcentSpor = salariat.ProcentSpor;
+                        salariatExistent.Retineri = salariat.Retineri;
+                        salariatExistent.PremiiBrute = salariat.PremiiBrute;
+
+                        model.SaveChanges();
+                    }
+
+                    return 1;
                 }
+                catch
+                {
+                    return -1;
+                }
+                
             }
         }
 

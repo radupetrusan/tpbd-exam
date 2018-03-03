@@ -11,7 +11,9 @@ namespace Calculator_Salariu.UI.CalculatorSalarii
         public CalculatorSalariiViewModel()
         {
             Salariati = new List<Salariat>();
+            SalariatiFiltrati = new List<Salariat>();
             Parametrii = new Parametrii();
+            Filtru = "";
 
             DataService = new DataService();
 
@@ -23,12 +25,15 @@ namespace Calculator_Salariu.UI.CalculatorSalarii
         #region Properties
 
         public List<Salariat> Salariati { get; set; }
+        public List<Salariat> SalariatiFiltrati { get; set; }
 
         public Parametrii Parametrii { get; set; }
 
-        private DataService DataService { get; set; }
+        private IDataService DataService { get; set; }
 
         public Salariat SalariatSelectat { get; set; }
+
+        public string Filtru { get; set; }
 
         #endregion
 
@@ -43,6 +48,26 @@ namespace Calculator_Salariu.UI.CalculatorSalarii
         public void IncarcaSalariatii()
         {
             Salariati = DataService.GetSalariati();
+            Filtrare();
+        }
+
+        public void Filtrare()
+        {
+            if (string.IsNullOrWhiteSpace(Filtru))
+            {
+                SalariatiFiltrati = Salariati;
+            }
+            else
+            {
+                SalariatiFiltrati = new List<Salariat>();
+                Salariati.ForEach(s =>
+                {
+                    if (s.Nume.ToLower().Contains(Filtru) || s.Prenume.ToLower().Contains(Filtru) || s.Functie.ToLower().Contains(Filtru))
+                    {
+                        SalariatiFiltrati.Add(s);
+                    }
+                });
+            }
         }
 
         public void IncarcaParametrii()
@@ -68,6 +93,11 @@ namespace Calculator_Salariu.UI.CalculatorSalarii
         public int StergeSalariat(Salariat salariat)
         {
             return DataService.StergeSalariat(salariat);
+        }
+
+        public int ModificaSalariat(Salariat salariat)
+        {
+            return DataService.ModificaSalariat(salariat);
         }
 
         #endregion

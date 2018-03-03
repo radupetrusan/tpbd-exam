@@ -31,13 +31,39 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.evidentaTab = new System.Windows.Forms.TabPage();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cautareTextBox = new System.Windows.Forms.TextBox();
+            this.salveazaModificarileButton = new System.Windows.Forms.Button();
             this.detaliiSalariatGroup = new System.Windows.Forms.GroupBox();
+            this.stergeSalariatButton = new System.Windows.Forms.Button();
+            this.modificaSalariatButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.viratCardLabel = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.retineriLabel = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cassLabel = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.casLabel = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.impozitLabel = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.brutImpozabilLabel = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.totalBrutLabel = new System.Windows.Forms.Label();
             this.premiiBruteLabel = new System.Windows.Forms.Label();
             this.sporLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.salariuLabel = new System.Windows.Forms.Label();
             this.functieLabel = new System.Windows.Forms.Label();
             this.numeLabel = new System.Windows.Forms.Label();
+            this.anuleazaModificarileButton = new System.Windows.Forms.Button();
             this.adaugaSalariatButton = new System.Windows.Forms.Button();
             this.salariatiGridView = new System.Windows.Forms.DataGridView();
             this.tiparireTab = new System.Windows.Forms.TabPage();
@@ -65,29 +91,6 @@
             this.despreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.salariuLabel = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.brutImpozabilLabel = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.impozitLabel = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.casLabel = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.cassLabel = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.retineriLabel = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.viratCardLabel = new System.Windows.Forms.Label();
-            this.modificaSalariatButton = new System.Windows.Forms.Button();
-            this.stergeSalariatButton = new System.Windows.Forms.Button();
-            this.salveazaModificarileButton = new System.Windows.Forms.Button();
-            this.anuleazaModificarileButton = new System.Windows.Forms.Button();
             this.nrcrtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,6 +106,7 @@
             this.retineriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viratCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salariatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tiparireFluturasButton = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.evidentaTab.SuspendLayout();
             this.detaliiSalariatGroup.SuspendLayout();
@@ -131,9 +135,12 @@
             // 
             // evidentaTab
             // 
-            this.evidentaTab.Controls.Add(this.anuleazaModificarileButton);
+            this.evidentaTab.Controls.Add(this.refreshButton);
+            this.evidentaTab.Controls.Add(this.label14);
+            this.evidentaTab.Controls.Add(this.cautareTextBox);
             this.evidentaTab.Controls.Add(this.salveazaModificarileButton);
             this.evidentaTab.Controls.Add(this.detaliiSalariatGroup);
+            this.evidentaTab.Controls.Add(this.anuleazaModificarileButton);
             this.evidentaTab.Controls.Add(this.adaugaSalariatButton);
             this.evidentaTab.Controls.Add(this.salariatiGridView);
             this.evidentaTab.Location = new System.Drawing.Point(4, 22);
@@ -144,21 +151,79 @@
             this.evidentaTab.Text = "Evidență";
             this.evidentaTab.UseVisualStyleBackColor = true;
             // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(263, 7);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshButton.TabIndex = 7;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Căutare";
+            // 
+            // cautareTextBox
+            // 
+            this.cautareTextBox.Location = new System.Drawing.Point(56, 8);
+            this.cautareTextBox.Name = "cautareTextBox";
+            this.cautareTextBox.Size = new System.Drawing.Size(201, 20);
+            this.cautareTextBox.TabIndex = 5;
+            this.cautareTextBox.TextChanged += new System.EventHandler(this.cautareTextBox_TextChanged);
+            // 
+            // salveazaModificarileButton
+            // 
+            this.salveazaModificarileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.salveazaModificarileButton.Location = new System.Drawing.Point(959, 6);
+            this.salveazaModificarileButton.Name = "salveazaModificarileButton";
+            this.salveazaModificarileButton.Size = new System.Drawing.Size(121, 23);
+            this.salveazaModificarileButton.TabIndex = 3;
+            this.salveazaModificarileButton.Text = "Salvează modificările";
+            this.salveazaModificarileButton.UseVisualStyleBackColor = true;
+            this.salveazaModificarileButton.Click += new System.EventHandler(this.salveazaModificarileButton_Click);
+            // 
             // detaliiSalariatGroup
             // 
             this.detaliiSalariatGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.detaliiSalariatGroup.Controls.Add(this.tiparireFluturasButton);
             this.detaliiSalariatGroup.Controls.Add(this.stergeSalariatButton);
             this.detaliiSalariatGroup.Controls.Add(this.modificaSalariatButton);
             this.detaliiSalariatGroup.Controls.Add(this.tableLayoutPanel1);
             this.detaliiSalariatGroup.Controls.Add(this.functieLabel);
             this.detaliiSalariatGroup.Controls.Add(this.numeLabel);
-            this.detaliiSalariatGroup.Location = new System.Drawing.Point(8, 284);
+            this.detaliiSalariatGroup.Location = new System.Drawing.Point(8, 314);
             this.detaliiSalariatGroup.Name = "detaliiSalariatGroup";
             this.detaliiSalariatGroup.Size = new System.Drawing.Size(1072, 385);
             this.detaliiSalariatGroup.TabIndex = 2;
             this.detaliiSalariatGroup.TabStop = false;
             this.detaliiSalariatGroup.Text = "Detalii salariat";
+            // 
+            // stergeSalariatButton
+            // 
+            this.stergeSalariatButton.Location = new System.Drawing.Point(111, 341);
+            this.stergeSalariatButton.Name = "stergeSalariatButton";
+            this.stergeSalariatButton.Size = new System.Drawing.Size(90, 23);
+            this.stergeSalariatButton.TabIndex = 8;
+            this.stergeSalariatButton.Text = "Șterge salariat";
+            this.stergeSalariatButton.UseVisualStyleBackColor = true;
+            this.stergeSalariatButton.Click += new System.EventHandler(this.stergeSalariatButton_Click);
+            // 
+            // modificaSalariatButton
+            // 
+            this.modificaSalariatButton.Location = new System.Drawing.Point(13, 341);
+            this.modificaSalariatButton.Name = "modificaSalariatButton";
+            this.modificaSalariatButton.Size = new System.Drawing.Size(92, 23);
+            this.modificaSalariatButton.TabIndex = 7;
+            this.modificaSalariatButton.Text = "Modifică salariat";
+            this.modificaSalariatButton.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -205,6 +270,162 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(225, 235);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
+            // viratCardLabel
+            // 
+            this.viratCardLabel.AutoSize = true;
+            this.viratCardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.viratCardLabel.Location = new System.Drawing.Point(116, 211);
+            this.viratCardLabel.Name = "viratCardLabel";
+            this.viratCardLabel.Size = new System.Drawing.Size(97, 16);
+            this.viratCardLabel.TabIndex = 24;
+            this.viratCardLabel.Text = "Salariu bază";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label23.Location = new System.Drawing.Point(4, 211);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(77, 16);
+            this.label23.TabIndex = 23;
+            this.label23.Text = "Virat card";
+            // 
+            // retineriLabel
+            // 
+            this.retineriLabel.AutoSize = true;
+            this.retineriLabel.Location = new System.Drawing.Point(116, 190);
+            this.retineriLabel.Name = "retineriLabel";
+            this.retineriLabel.Size = new System.Drawing.Size(65, 13);
+            this.retineriLabel.TabIndex = 22;
+            this.retineriLabel.Text = "Salariu bază";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(4, 190);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 13);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Rețineri";
+            // 
+            // cassLabel
+            // 
+            this.cassLabel.AutoSize = true;
+            this.cassLabel.Location = new System.Drawing.Point(116, 169);
+            this.cassLabel.Name = "cassLabel";
+            this.cassLabel.Size = new System.Drawing.Size(65, 13);
+            this.cassLabel.TabIndex = 20;
+            this.cassLabel.Text = "Salariu bază";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(4, 169);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(35, 13);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "CASS";
+            // 
+            // casLabel
+            // 
+            this.casLabel.AutoSize = true;
+            this.casLabel.Location = new System.Drawing.Point(116, 148);
+            this.casLabel.Name = "casLabel";
+            this.casLabel.Size = new System.Drawing.Size(65, 13);
+            this.casLabel.TabIndex = 18;
+            this.casLabel.Text = "Salariu bază";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(4, 148);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(28, 13);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "CAS";
+            // 
+            // impozitLabel
+            // 
+            this.impozitLabel.AutoSize = true;
+            this.impozitLabel.Location = new System.Drawing.Point(116, 127);
+            this.impozitLabel.Name = "impozitLabel";
+            this.impozitLabel.Size = new System.Drawing.Size(65, 13);
+            this.impozitLabel.TabIndex = 16;
+            this.impozitLabel.Text = "Salariu bază";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(40, 13);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Impozit";
+            // 
+            // brutImpozabilLabel
+            // 
+            this.brutImpozabilLabel.AutoSize = true;
+            this.brutImpozabilLabel.Location = new System.Drawing.Point(116, 106);
+            this.brutImpozabilLabel.Name = "brutImpozabilLabel";
+            this.brutImpozabilLabel.Size = new System.Drawing.Size(65, 13);
+            this.brutImpozabilLabel.TabIndex = 14;
+            this.brutImpozabilLabel.Text = "Salariu bază";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(4, 106);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Brut impozabil";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 85);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Total brut";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(4, 64);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Premii brute";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Spor (%)";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Salariu bază";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(116, 1);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Valoare";
+            // 
             // totalBrutLabel
             // 
             this.totalBrutLabel.AutoSize = true;
@@ -232,6 +453,25 @@
             this.sporLabel.TabIndex = 3;
             this.sporLabel.Text = "spor";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(4, 1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Suma";
+            // 
+            // salariuLabel
+            // 
+            this.salariuLabel.AutoSize = true;
+            this.salariuLabel.Location = new System.Drawing.Point(116, 22);
+            this.salariuLabel.Name = "salariuLabel";
+            this.salariuLabel.Size = new System.Drawing.Size(20, 13);
+            this.salariuLabel.TabIndex = 8;
+            this.salariuLabel.Text = "sal";
+            // 
             // functieLabel
             // 
             this.functieLabel.AutoSize = true;
@@ -252,9 +492,20 @@
             this.numeLabel.TabIndex = 0;
             this.numeLabel.Text = "Nume";
             // 
+            // anuleazaModificarileButton
+            // 
+            this.anuleazaModificarileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.anuleazaModificarileButton.Location = new System.Drawing.Point(836, 6);
+            this.anuleazaModificarileButton.Name = "anuleazaModificarileButton";
+            this.anuleazaModificarileButton.Size = new System.Drawing.Size(117, 23);
+            this.anuleazaModificarileButton.TabIndex = 4;
+            this.anuleazaModificarileButton.Text = "Anulează modificările";
+            this.anuleazaModificarileButton.UseVisualStyleBackColor = true;
+            this.anuleazaModificarileButton.Click += new System.EventHandler(this.anuleazaModificarileButton_Click);
+            // 
             // adaugaSalariatButton
             // 
-            this.adaugaSalariatButton.Location = new System.Drawing.Point(8, 675);
+            this.adaugaSalariatButton.Location = new System.Drawing.Point(8, 705);
             this.adaugaSalariatButton.Name = "adaugaSalariatButton";
             this.adaugaSalariatButton.Size = new System.Drawing.Size(131, 23);
             this.adaugaSalariatButton.TabIndex = 1;
@@ -287,7 +538,7 @@
             this.retineriDataGridViewTextBoxColumn,
             this.viratCardDataGridViewTextBoxColumn});
             this.salariatiGridView.DataSource = this.salariatBindingSource;
-            this.salariatiGridView.Location = new System.Drawing.Point(8, 6);
+            this.salariatiGridView.Location = new System.Drawing.Point(8, 36);
             this.salariatiGridView.Name = "salariatiGridView";
             this.salariatiGridView.Size = new System.Drawing.Size(1072, 272);
             this.salariatiGridView.TabIndex = 0;
@@ -491,7 +742,7 @@
             // 
             this.iesireToolStripMenuItem.Name = "iesireToolStripMenuItem";
             this.iesireToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.iesireToolStripMenuItem.Text = "Ieșire";
             this.iesireToolStripMenuItem.Click += new System.EventHandler(this.iesireToolStripMenuItem_Click);
             // 
@@ -522,223 +773,10 @@
             this.ajutorToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.ajutorToolStripMenuItem.Text = "Ajutor";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(4, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Suma";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(116, 1);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Valoare";
-            // 
-            // salariuLabel
-            // 
-            this.salariuLabel.AutoSize = true;
-            this.salariuLabel.Location = new System.Drawing.Point(116, 22);
-            this.salariuLabel.Name = "salariuLabel";
-            this.salariuLabel.Size = new System.Drawing.Size(20, 13);
-            this.salariuLabel.TabIndex = 8;
-            this.salariuLabel.Text = "sal";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Salariu bază";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 43);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Spor (%)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 64);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Premii brute";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 85);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Total brut";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 106);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Brut impozabil";
-            // 
-            // brutImpozabilLabel
-            // 
-            this.brutImpozabilLabel.AutoSize = true;
-            this.brutImpozabilLabel.Location = new System.Drawing.Point(116, 106);
-            this.brutImpozabilLabel.Name = "brutImpozabilLabel";
-            this.brutImpozabilLabel.Size = new System.Drawing.Size(65, 13);
-            this.brutImpozabilLabel.TabIndex = 14;
-            this.brutImpozabilLabel.Text = "Salariu bază";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 127);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Impozit";
-            // 
-            // impozitLabel
-            // 
-            this.impozitLabel.AutoSize = true;
-            this.impozitLabel.Location = new System.Drawing.Point(116, 127);
-            this.impozitLabel.Name = "impozitLabel";
-            this.impozitLabel.Size = new System.Drawing.Size(65, 13);
-            this.impozitLabel.TabIndex = 16;
-            this.impozitLabel.Text = "Salariu bază";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 148);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 13);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "CAS";
-            // 
-            // casLabel
-            // 
-            this.casLabel.AutoSize = true;
-            this.casLabel.Location = new System.Drawing.Point(116, 148);
-            this.casLabel.Name = "casLabel";
-            this.casLabel.Size = new System.Drawing.Size(65, 13);
-            this.casLabel.TabIndex = 18;
-            this.casLabel.Text = "Salariu bază";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 169);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 13);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "CASS";
-            // 
-            // cassLabel
-            // 
-            this.cassLabel.AutoSize = true;
-            this.cassLabel.Location = new System.Drawing.Point(116, 169);
-            this.cassLabel.Name = "cassLabel";
-            this.cassLabel.Size = new System.Drawing.Size(65, 13);
-            this.cassLabel.TabIndex = 20;
-            this.cassLabel.Text = "Salariu bază";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 190);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 13);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Rețineri";
-            // 
-            // retineriLabel
-            // 
-            this.retineriLabel.AutoSize = true;
-            this.retineriLabel.Location = new System.Drawing.Point(116, 190);
-            this.retineriLabel.Name = "retineriLabel";
-            this.retineriLabel.Size = new System.Drawing.Size(65, 13);
-            this.retineriLabel.TabIndex = 22;
-            this.retineriLabel.Text = "Salariu bază";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label23.Location = new System.Drawing.Point(4, 211);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 16);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "Virat card";
-            // 
-            // viratCardLabel
-            // 
-            this.viratCardLabel.AutoSize = true;
-            this.viratCardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.viratCardLabel.Location = new System.Drawing.Point(116, 211);
-            this.viratCardLabel.Name = "viratCardLabel";
-            this.viratCardLabel.Size = new System.Drawing.Size(97, 16);
-            this.viratCardLabel.TabIndex = 24;
-            this.viratCardLabel.Text = "Salariu bază";
-            // 
-            // modificaSalariatButton
-            // 
-            this.modificaSalariatButton.Location = new System.Drawing.Point(13, 341);
-            this.modificaSalariatButton.Name = "modificaSalariatButton";
-            this.modificaSalariatButton.Size = new System.Drawing.Size(92, 23);
-            this.modificaSalariatButton.TabIndex = 7;
-            this.modificaSalariatButton.Text = "Modifică salariat";
-            this.modificaSalariatButton.UseVisualStyleBackColor = true;
-            // 
-            // stergeSalariatButton
-            // 
-            this.stergeSalariatButton.Location = new System.Drawing.Point(111, 341);
-            this.stergeSalariatButton.Name = "stergeSalariatButton";
-            this.stergeSalariatButton.Size = new System.Drawing.Size(90, 23);
-            this.stergeSalariatButton.TabIndex = 8;
-            this.stergeSalariatButton.Text = "Șterge salariat";
-            this.stergeSalariatButton.UseVisualStyleBackColor = true;
-            this.stergeSalariatButton.Click += new System.EventHandler(this.stergeSalariatButton_Click);
-            // 
-            // salveazaModificarileButton
-            // 
-            this.salveazaModificarileButton.Location = new System.Drawing.Point(8, 704);
-            this.salveazaModificarileButton.Name = "salveazaModificarileButton";
-            this.salveazaModificarileButton.Size = new System.Drawing.Size(131, 23);
-            this.salveazaModificarileButton.TabIndex = 3;
-            this.salveazaModificarileButton.Text = "Salvează modificările";
-            this.salveazaModificarileButton.UseVisualStyleBackColor = true;
-            // 
-            // anuleazaModificarileButton
-            // 
-            this.anuleazaModificarileButton.Location = new System.Drawing.Point(145, 704);
-            this.anuleazaModificarileButton.Name = "anuleazaModificarileButton";
-            this.anuleazaModificarileButton.Size = new System.Drawing.Size(131, 23);
-            this.anuleazaModificarileButton.TabIndex = 4;
-            this.anuleazaModificarileButton.Text = "Anulează modificările";
-            this.anuleazaModificarileButton.UseVisualStyleBackColor = true;
-            this.anuleazaModificarileButton.Click += new System.EventHandler(this.anuleazaModificarileButton_Click);
-            // 
             // nrcrtDataGridViewTextBoxColumn
             // 
             this.nrcrtDataGridViewTextBoxColumn.DataPropertyName = "Nr_crt";
-            this.nrcrtDataGridViewTextBoxColumn.HeaderText = "Nr_crt";
+            this.nrcrtDataGridViewTextBoxColumn.HeaderText = "Nr. crt.";
             this.nrcrtDataGridViewTextBoxColumn.Name = "nrcrtDataGridViewTextBoxColumn";
             // 
             // numeDataGridViewTextBoxColumn
@@ -756,72 +794,88 @@
             // functieDataGridViewTextBoxColumn
             // 
             this.functieDataGridViewTextBoxColumn.DataPropertyName = "Functie";
-            this.functieDataGridViewTextBoxColumn.HeaderText = "Functie";
+            this.functieDataGridViewTextBoxColumn.HeaderText = "Funcție";
             this.functieDataGridViewTextBoxColumn.Name = "functieDataGridViewTextBoxColumn";
             // 
             // salariuBazaDataGridViewTextBoxColumn
             // 
             this.salariuBazaDataGridViewTextBoxColumn.DataPropertyName = "SalariuBaza";
-            this.salariuBazaDataGridViewTextBoxColumn.HeaderText = "SalariuBaza";
+            this.salariuBazaDataGridViewTextBoxColumn.HeaderText = "Salariu bază";
             this.salariuBazaDataGridViewTextBoxColumn.Name = "salariuBazaDataGridViewTextBoxColumn";
             // 
             // procentSporDataGridViewTextBoxColumn
             // 
             this.procentSporDataGridViewTextBoxColumn.DataPropertyName = "ProcentSpor";
-            this.procentSporDataGridViewTextBoxColumn.HeaderText = "ProcentSpor";
+            this.procentSporDataGridViewTextBoxColumn.HeaderText = "Spor (%)";
             this.procentSporDataGridViewTextBoxColumn.Name = "procentSporDataGridViewTextBoxColumn";
             // 
             // premiiBruteDataGridViewTextBoxColumn
             // 
             this.premiiBruteDataGridViewTextBoxColumn.DataPropertyName = "PremiiBrute";
-            this.premiiBruteDataGridViewTextBoxColumn.HeaderText = "PremiiBrute";
+            this.premiiBruteDataGridViewTextBoxColumn.HeaderText = "Premii brute";
             this.premiiBruteDataGridViewTextBoxColumn.Name = "premiiBruteDataGridViewTextBoxColumn";
             // 
             // totalBrutDataGridViewTextBoxColumn
             // 
             this.totalBrutDataGridViewTextBoxColumn.DataPropertyName = "TotalBrut";
-            this.totalBrutDataGridViewTextBoxColumn.HeaderText = "TotalBrut";
+            this.totalBrutDataGridViewTextBoxColumn.HeaderText = "Total brut";
             this.totalBrutDataGridViewTextBoxColumn.Name = "totalBrutDataGridViewTextBoxColumn";
+            this.totalBrutDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // brutImpozabilDataGridViewTextBoxColumn
             // 
             this.brutImpozabilDataGridViewTextBoxColumn.DataPropertyName = "BrutImpozabil";
-            this.brutImpozabilDataGridViewTextBoxColumn.HeaderText = "BrutImpozabil";
+            this.brutImpozabilDataGridViewTextBoxColumn.HeaderText = "Brut impozabil";
             this.brutImpozabilDataGridViewTextBoxColumn.Name = "brutImpozabilDataGridViewTextBoxColumn";
+            this.brutImpozabilDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // impozitDataGridViewTextBoxColumn
             // 
             this.impozitDataGridViewTextBoxColumn.DataPropertyName = "Impozit";
             this.impozitDataGridViewTextBoxColumn.HeaderText = "Impozit";
             this.impozitDataGridViewTextBoxColumn.Name = "impozitDataGridViewTextBoxColumn";
+            this.impozitDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cASDataGridViewTextBoxColumn
             // 
             this.cASDataGridViewTextBoxColumn.DataPropertyName = "CAS";
             this.cASDataGridViewTextBoxColumn.HeaderText = "CAS";
             this.cASDataGridViewTextBoxColumn.Name = "cASDataGridViewTextBoxColumn";
+            this.cASDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cASSDataGridViewTextBoxColumn
             // 
             this.cASSDataGridViewTextBoxColumn.DataPropertyName = "CASS";
             this.cASSDataGridViewTextBoxColumn.HeaderText = "CASS";
             this.cASSDataGridViewTextBoxColumn.Name = "cASSDataGridViewTextBoxColumn";
+            this.cASSDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // retineriDataGridViewTextBoxColumn
             // 
             this.retineriDataGridViewTextBoxColumn.DataPropertyName = "Retineri";
-            this.retineriDataGridViewTextBoxColumn.HeaderText = "Retineri";
+            this.retineriDataGridViewTextBoxColumn.HeaderText = "Rețineri";
             this.retineriDataGridViewTextBoxColumn.Name = "retineriDataGridViewTextBoxColumn";
             // 
             // viratCardDataGridViewTextBoxColumn
             // 
             this.viratCardDataGridViewTextBoxColumn.DataPropertyName = "ViratCard";
-            this.viratCardDataGridViewTextBoxColumn.HeaderText = "ViratCard";
+            this.viratCardDataGridViewTextBoxColumn.HeaderText = "Virat card";
             this.viratCardDataGridViewTextBoxColumn.Name = "viratCardDataGridViewTextBoxColumn";
+            this.viratCardDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // salariatBindingSource
             // 
             this.salariatBindingSource.DataSource = typeof(Calculator_Salariu.DAL.Model.Salariat);
+            // 
+            // tiparireFluturasButton
+            // 
+            this.tiparireFluturasButton.Location = new System.Drawing.Point(207, 341);
+            this.tiparireFluturasButton.Name = "tiparireFluturasButton";
+            this.tiparireFluturasButton.Size = new System.Drawing.Size(123, 23);
+            this.tiparireFluturasButton.TabIndex = 9;
+            this.tiparireFluturasButton.Text = "Tipărire fluturaș salariu";
+            this.tiparireFluturasButton.UseVisualStyleBackColor = true;
+            this.tiparireFluturasButton.Click += new System.EventHandler(this.tiparireFluturasButton_Click);
             // 
             // CalculatorSalarii
             // 
@@ -834,6 +888,7 @@
             this.Text = "Calculator salarii";
             this.tabControl.ResumeLayout(false);
             this.evidentaTab.ResumeLayout(false);
+            this.evidentaTab.PerformLayout();
             this.detaliiSalariatGroup.ResumeLayout(false);
             this.detaliiSalariatGroup.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -882,20 +937,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView salariatiGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nrcrtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenumeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn functieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salariuBazaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn procentSporDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn premiiBruteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalBrutDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brutImpozabilDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn impozitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cASDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cASSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn retineriDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn viratCardDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource salariatBindingSource;
         private System.Windows.Forms.Button adaugaSalariatButton;
         private System.Windows.Forms.GroupBox detaliiSalariatGroup;
@@ -928,6 +969,24 @@
         private System.Windows.Forms.Button modificaSalariatButton;
         private System.Windows.Forms.Button anuleazaModificarileButton;
         private System.Windows.Forms.Button salveazaModificarileButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrcrtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenumeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn functieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salariuBazaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn procentSporDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn premiiBruteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalBrutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brutImpozabilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn impozitDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cASSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn retineriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viratCardDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox cautareTextBox;
+        private System.Windows.Forms.Button tiparireFluturasButton;
     }
 }
 

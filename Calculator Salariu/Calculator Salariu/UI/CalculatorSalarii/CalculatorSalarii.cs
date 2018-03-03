@@ -199,9 +199,52 @@ namespace Calculator_Salariu
 
         private void SyncDataEvidenta()
         {
+            var salariuBaza = 0;
+            var spor = 0;
+            var premii = 0;
+            var cas = 0;
+            var cass = 0;
+            var impozit = 0;
+            var virat = 0;
+            var retineri = 0;
+            var totalBrut = 0;
+            var salarImpozabil = 0;
+
             salariatBindingSource.Clear();
 
-            CalculatorViewModel.SalariatiFiltrati.ForEach(s => salariatBindingSource.Add(s));
+            CalculatorViewModel.SalariatiFiltrati.ForEach(s => {
+                salariatBindingSource.Add(s);
+
+                salariuBaza += s.SalariuBaza;
+                spor += s.ProcentSpor;
+                premii += s.PremiiBrute;
+                cas += s.CAS ?? 0;
+                cass += s.CASS ?? 0;
+                impozit += s.Impozit ?? 0;
+                virat += s.ViratCard ?? 0;
+                retineri += s.Retineri;
+                totalBrut += s.TotalBrut ?? 0;
+                salarImpozabil += s.BrutImpozabil ?? 0;
+            });
+
+            var salariat = new Salariat
+            {
+                Nume = "",
+                Prenume = "",
+                Functie = "TOTAL",
+                SalariuBaza = salariuBaza,
+                ProcentSpor = spor,
+                PremiiBrute = premii,
+                CAS = cas,
+                CASS = cass,
+                Impozit = impozit,
+                ViratCard = virat,
+                Retineri = retineri,
+                TotalBrut = totalBrut,
+                BrutImpozabil = salarImpozabil
+            };
+
+            salariatBindingSource.Add(salariat);
         }
 
         private void SyncDataDetaliiSalariat(Salariat salariat)

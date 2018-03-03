@@ -5,7 +5,7 @@ GO
 -- =============================================
 -- Author:		Radu Petrusan
 -- Create date: 03.03.2018
--- Description:	Creaza Trigger pentru a calcula sumele cand un salariat este adaugat
+-- Description:	Creaza Trigger pentru a calcula sumele cand un salariat este modificat
 -- =============================================
 
 IF OBJECT_ID('dbo.SalariatiUpdate', 'TR') IS NOT NULL 

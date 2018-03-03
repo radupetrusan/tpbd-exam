@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Salariati" EntityType="Model.Salariat" />
+    <EntitySet Name="Parametrii" EntityType="Model.Parametrii" />
+  </EntityContainer>
+  <EntityType Name="Salariat">
+    <Key>
+      <PropertyRef Name="Nr_crt" />
+    </Key>
+    <Property Name="Nr_crt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nume" Type="String" Nullable="false" />
+    <Property Name="Prenume" Type="String" Nullable="false" />
+    <Property Name="Functie" Type="String" Nullable="true" />
+    <Property Name="SalariuBaza" Type="Int32" Nullable="false" />
+    <Property Name="ProcentSpor" Type="Int32" Nullable="false" DefaultValue="0" />
+    <Property Name="PremiiBrute" Type="Int32" Nullable="false" DefaultValue="0" />
+    <Property Name="TotalBrut" Type="Int32" Nullable="true" />
+    <Property Name="BrutImpozabil" Type="Int32" Nullable="true" />
+    <Property Name="Impozit" Type="Int32" Nullable="true" />
+    <Property Name="CAS" Type="Int32" Nullable="true" />
+    <Property Name="CASS" Type="Int32" Nullable="true" />
+    <Property Name="Retineri" Type="Int32" Nullable="false" DefaultValue="0" />
+    <Property Name="ViratCard" Type="Int32" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Parametrii">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CAS" Type="Decimal" Nullable="false" />
+    <Property Name="CASS" Type="Decimal" Nullable="false" />
+    <Property Name="Impozit" Type="Decimal" Nullable="false" />
+    <Property Name="Parola" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,1 +1,14 @@
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Calculator Salariu.exe.config
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Calculator Salariu.exe
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Calculator Salariu.pdb
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator Salariu.csprojResolveAssemblyReference.cache
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.Properties.Resources.resources
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator Salariu.csproj.GenerateResource.Cache
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator Salariu.exe
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator Salariu.pdb
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\EntityFramework.dll
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\EntityFramework.SqlServer.dll
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\EntityFramework.xml
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\EntityFramework.SqlServer.xml
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.CalculatorSalarii.resources
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.ModificaParametrii.resources

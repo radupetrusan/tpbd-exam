@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Salariati" EntityType="Model.Store.Salariati" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parametrii" EntityType="Model.Store.Parametrii" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Salariati">
+    <Key>
+      <PropertyRef Name="Nr_crt" />
+    </Key>
+    <Property Name="Nr_crt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prenume" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Functie" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SalariuBaza" Type="int" Nullable="false" />
+    <Property Name="ProcentSpor" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="PremiiBrute" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="TotalBrut" Type="int" Nullable="true" />
+    <Property Name="BrutImpozabil" Type="int" Nullable="true" />
+    <Property Name="Impozit" Type="int" Nullable="true" />
+    <Property Name="CAS" Type="int" Nullable="true" />
+    <Property Name="CASS" Type="int" Nullable="true" />
+    <Property Name="Retineri" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="ViratCard" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Parametrii">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CAS" Type="decimal" Nullable="false" />
+    <Property Name="CASS" Type="decimal" Nullable="false" />
+    <Property Name="Impozit" Type="decimal" Nullable="false" />
+    <Property Name="Parola" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>

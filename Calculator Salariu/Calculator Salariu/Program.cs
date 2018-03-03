@@ -14,9 +14,19 @@ namespace Calculator_Salariu
         [STAThread]
         static void Main()
         {
+            Initialize();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new CalculatorSalarii());
+        }
+
+        private static void Initialize()
+        {
+            MessageBoxManager.OK = "OK";
+            MessageBoxManager.Yes = "Da";
+            MessageBoxManager.No = "Nu";
+            MessageBoxManager.Register();
         }
     }
 }

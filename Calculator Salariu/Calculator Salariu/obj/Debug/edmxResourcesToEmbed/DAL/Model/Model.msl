@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ModelContainer">
+    <EntitySetMapping Name="Salariati">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Salariat)">
+        <MappingFragment StoreEntitySet="Salariati">
+          <ScalarProperty Name="Nr_crt" ColumnName="Nr_crt" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Functie" ColumnName="Functie" />
+          <ScalarProperty Name="SalariuBaza" ColumnName="SalariuBaza" />
+          <ScalarProperty Name="ProcentSpor" ColumnName="ProcentSpor" />
+          <ScalarProperty Name="PremiiBrute" ColumnName="PremiiBrute" />
+          <ScalarProperty Name="TotalBrut" ColumnName="TotalBrut" />
+          <ScalarProperty Name="BrutImpozabil" ColumnName="BrutImpozabil" />
+          <ScalarProperty Name="Impozit" ColumnName="Impozit" />
+          <ScalarProperty Name="CAS" ColumnName="CAS" />
+          <ScalarProperty Name="CASS" ColumnName="CASS" />
+          <ScalarProperty Name="Retineri" ColumnName="Retineri" />
+          <ScalarProperty Name="ViratCard" ColumnName="ViratCard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametrii">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Parametrii)">
+        <MappingFragment StoreEntitySet="Parametrii">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CAS" ColumnName="CAS" />
+          <ScalarProperty Name="CASS" ColumnName="CASS" />
+          <ScalarProperty Name="Impozit" ColumnName="Impozit" />
+          <ScalarProperty Name="Parola" ColumnName="Parola" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,13 +1,7 @@
-﻿using Calculator_Salariu.UI.CalculatorSalarii;
+﻿using Calculator_Salariu.DAL.Model;
+using Calculator_Salariu.UI.CalculatorSalarii;
 using Calculator_Salariu.UI.CalculatorSalarii.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator_Salariu
@@ -88,6 +82,64 @@ namespace Calculator_Salariu
             parolaNouaConfirmaTextBox.Text = "";
         }
 
+        private void adaugaSalariatButton_Click(object sender, EventArgs e)
+        {
+            var form = new AdaugaSalariat();
+
+            if (form.ShowDialog() == DialogResult.Yes)
+            {
+                var result = CalculatorViewModel.AdaugaSalariat(form.Salariat);
+
+                if (result > 0)
+                {
+                    CalculatorViewModel.IncarcaSalariatii();
+                    SyncDataEvidenta();
+                }
+                else
+                {
+                    MessageBox.Show("Eroare!");
+                }
+            }
+        }
+
+        private void salariatiGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var o = (Salariat)salariatBindingSource.Current;
+
+            MessageBox.Show(o.Nume + " " + o.Prenume);
+        }
+
+        private void salariatiGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            CalculatorViewModel.SalariatSelectat = (Salariat)salariatBindingSource[e.RowIndex];
+            
+            SyncDataDetaliiSalariat(CalculatorViewModel.SalariatSelectat);
+        }
+
+        private void stergeSalariatButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Sunteți sigur că doriți să ștergeți acest salariat?", "Atenție", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                var result = CalculatorViewModel.StergeSalariat(CalculatorViewModel.SalariatSelectat);
+
+                if (result > 0)
+                {
+                    CalculatorViewModel.IncarcaSalariatii();
+                    SyncDataEvidenta();
+                }
+                else
+                {
+                    MessageBox.Show("Eroare la ștergere!");
+                }
+            }
+        }
+
+        private void anuleazaModificarileButton_Click(object sender, EventArgs e)
+        {
+            CalculatorViewModel.IncarcaSalariatii();
+            SyncDataEvidenta();
+        }
+
         #endregion Events
 
         #region Private Functionality
@@ -99,6 +151,7 @@ namespace Calculator_Salariu
             SyncDataConfigurare();
             SyncDataEvidenta();
             SyncDataTiparire();
+            SyncDataDetaliiSalariat(CalculatorViewModel.SalariatSelectat);
         }
 
         private void SyncDataConfigurare()
@@ -115,12 +168,39 @@ namespace Calculator_Salariu
 
         private void SyncDataEvidenta()
         {
+            salariatBindingSource.Clear();
 
+            CalculatorViewModel.Salariati.ForEach(s => salariatBindingSource.Add(s));
         }
 
-        #endregion
+        private void SyncDataDetaliiSalariat(Salariat salariat)
+        {
+            if (salariat == null || salariat.Nr_crt == 0)
+            {
+                detaliiSalariatGroup.Visible = false;
+                return;
+            }
+
+            detaliiSalariatGroup.Visible = true;
+
+            numeLabel.Text = (salariat.Nume != null ? salariat.Nume.ToUpper() : "") + " " + (salariat.Prenume ?? "");
+            functieLabel.Text = salariat.Functie ?? "";
+
+            salariuLabel.Text = salariat.SalariuBaza + " RON";
+            sporLabel.Text = salariat.ProcentSpor + " RON";
+            premiiBruteLabel.Text = salariat.PremiiBrute + " RON";
+            totalBrutLabel.Text = (salariat.TotalBrut ?? 0) + " RON";
+            brutImpozabilLabel.Text = (salariat.BrutImpozabil ?? 0) + " RON";
+            impozitLabel.Text = (salariat.Impozit ?? 0) + " RON";
+            casLabel.Text = (salariat.CAS ?? 0) + " RON";
+            cassLabel.Text = (salariat.CASS ?? 0) + " RON";
+            retineriLabel.Text = salariat.Retineri + " RON";
+            viratCardLabel.Text = (salariat.ViratCard ?? 0) + " RON";
+        }
+
 
         #endregion
 
+        #endregion
     }
 }

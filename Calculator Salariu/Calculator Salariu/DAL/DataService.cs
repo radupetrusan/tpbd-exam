@@ -1,13 +1,10 @@
 ﻿using Calculator_Salariu.DAL.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator_Salariu.DAL
 {
-    public class DataService
+    public class DataService : IDataService
     {
         #region Salariati
 
@@ -19,12 +16,22 @@ namespace Calculator_Salariu.DAL
             }
         }
 
-        public void AdaugaSalariat(Salariat salariat)
+        public int AdaugaSalariat(Salariat salariat)
         {
             using (var model = new ModelContainer())
             {
-                model.Salariati.Add(salariat);
-                model.SaveChanges();
+                try
+                {
+                    model.Salariati.Add(salariat);
+                    model.SaveChanges();
+
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+                
             }
         }
 
@@ -39,6 +46,27 @@ namespace Calculator_Salariu.DAL
                     salariatExistent = salariat;
                     model.SaveChanges();
                 }
+            }
+        }
+
+        public int StergeSalariat(Salariat salariat)
+        {
+            using (var model = new ModelContainer())
+            {
+                try
+                {
+                    var salariatExistent = model.Salariati.FirstOrDefault(s => s.Nr_crt == salariat.Nr_crt);
+
+                    model.Salariati.Remove(salariatExistent);
+                    model.SaveChanges();
+
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+                
             }
         }
 

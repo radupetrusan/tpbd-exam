@@ -1,0 +1,12 @@
+To-do app angajati
+
+-salvare in baza de date cand se apasa pe butonul de salvare din ecran evidenta
+-criptare parola
+-editare individuala salariati
+-adaugare poza salariati
+-rapoarte
+-triggere si proceduri stocate pentru calcularea si modificarea datelor angajatiilor
+-script pentru adaugarea datelor prestabilite
+-ecran ajutor
+-ecran despre
+-cautare salariat in ecran evidenta

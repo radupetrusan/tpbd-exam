@@ -12,3 +12,4 @@ E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\EntityFramework.SqlServer.xml
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.CalculatorSalarii.resources
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.ModificaParametrii.resources
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.AdaugaSalariat.resources

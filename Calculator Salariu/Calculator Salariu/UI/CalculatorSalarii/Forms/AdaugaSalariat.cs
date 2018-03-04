@@ -1,4 +1,5 @@
 ﻿using Calculator_Salariu.DAL.Model;
+using Calculator_Salariu.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,25 @@ namespace Calculator_Salariu.UI.CalculatorSalarii.Forms
             Salariat.ProcentSpor = (int)sporNumeric.Value;
             Salariat.PremiiBrute = (int)premiiBruteNumeric.Value;
             Salariat.Retineri = (int)retineriNumeric.Value;
+        }
+
+        private void browseImageButton_Click(object sender, EventArgs e)
+        {
+            var dialog = new OpenFileDialog();
+            dialog.Multiselect = false;
+            dialog.Title = "Vă rugăm să alegeți o poză";
+            dialog.Filter = "JPG|*.jpg|PNG|*.png";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!string.IsNullOrWhiteSpace(dialog.FileName))
+                {
+                    pictureBox.ImageLocation = dialog.FileName;
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Salariat.Imagine = ImageUtils.ConvertFileToByte(pictureBox.ImageLocation);
+                }
+            }
         }
     }
 }

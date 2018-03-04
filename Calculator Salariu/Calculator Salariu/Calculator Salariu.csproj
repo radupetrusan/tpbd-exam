@@ -95,12 +95,26 @@
     <Compile Include="UI\CalculatorSalarii\Forms\AdaugaSalariat.Designer.cs">
       <DependentUpon>AdaugaSalariat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\Ajutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\Ajutor.Designer.cs">
+      <DependentUpon>Ajutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\Despre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\Despre.Designer.cs">
+      <DependentUpon>Despre.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CalculatorSalarii\Forms\ModificaParametrii.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\CalculatorSalarii\Forms\ModificaParametrii.Designer.cs">
       <DependentUpon>ModificaParametrii.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\CryptoUtils.cs" />
+    <Compile Include="Utils\ImageUtils.cs" />
     <Compile Include="Utils\MessageBoxManager.cs" />
     <EmbeddedResource Include="UI\CalculatorSalarii\CalculatorSalarii.resx">
       <DependentUpon>CalculatorSalarii.cs</DependentUpon>
@@ -154,6 +168,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
       <DependentUpon>Model.edmx</DependentUpon>
     </Content>
+    <Content Include="Scripts\PopulareDateInitiale.sql" />
     <Content Include="Scripts\Stored Procedures\CalculeazaSumeSalarii.sql" />
     <Content Include="Scripts\Triggers\ParametriiUpdate.sql" />
     <Content Include="Scripts\Triggers\SalariatiInsert.sql" />

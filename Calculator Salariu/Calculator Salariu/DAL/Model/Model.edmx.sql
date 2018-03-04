@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/03/2018 14:49:47
+-- Date Created: 03/04/2018 16:43:47
 -- Generated from EDMX file: E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\DAL\Model\Model.edmx
 -- --------------------------------------------------
 
@@ -48,7 +48,8 @@ CREATE TABLE [dbo].[Salariati] (
     [CAS] int  NULL,
     [CASS] int  NULL,
     [Retineri] int  NOT NULL,
-    [ViratCard] int  NULL
+    [ViratCard] int  NULL,
+    [Imagine] varbinary(max)  NULL
 );
 GO
 

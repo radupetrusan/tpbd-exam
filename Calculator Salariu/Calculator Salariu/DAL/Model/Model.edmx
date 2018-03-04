@@ -27,6 +27,7 @@
     <Property Name="CASS" Type="int" Nullable="true" />
     <Property Name="Retineri" Type="int" Nullable="false" DefaultValue="0" />
     <Property Name="ViratCard" Type="int" Nullable="true" />
+    <Property Name="Imagine" Type="varbinary(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Parametrii">
     <Key>
@@ -64,6 +65,7 @@
           <Property Name="CASS" Type="Int32" Nullable="true" />
           <Property Name="Retineri" Type="Int32" Nullable="false" DefaultValue="0" />
           <Property Name="ViratCard" Type="Int32" Nullable="true" />
+          <Property Name="Imagine" Type="Binary" Nullable="true" />
         </EntityType>
         <EntityType Name="Parametrii">
           <Key>
@@ -98,6 +100,7 @@
           <ScalarProperty Name="CASS" ColumnName="CASS" />
           <ScalarProperty Name="Retineri" ColumnName="Retineri" />
           <ScalarProperty Name="ViratCard" ColumnName="ViratCard" />
+          <ScalarProperty Name="Imagine" ColumnName="Imagine" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

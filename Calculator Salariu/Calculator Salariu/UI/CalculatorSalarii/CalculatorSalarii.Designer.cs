@@ -47,6 +47,7 @@
             this.cautareTextBox = new System.Windows.Forms.TextBox();
             this.salveazaModificarileButton = new System.Windows.Forms.Button();
             this.detaliiSalariatGroup = new System.Windows.Forms.GroupBox();
+            this.tiparireFluturasButton = new System.Windows.Forms.Button();
             this.stergeSalariatButton = new System.Windows.Forms.Button();
             this.modificaSalariatButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -102,7 +103,7 @@
             this.despreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiparireFluturasButton = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.nrcrtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,6 +128,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,6 +206,7 @@
             // 
             this.detaliiSalariatGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.detaliiSalariatGroup.Controls.Add(this.pictureBox);
             this.detaliiSalariatGroup.Controls.Add(this.tiparireFluturasButton);
             this.detaliiSalariatGroup.Controls.Add(this.stergeSalariatButton);
             this.detaliiSalariatGroup.Controls.Add(this.modificaSalariatButton);
@@ -217,9 +220,19 @@
             this.detaliiSalariatGroup.TabStop = false;
             this.detaliiSalariatGroup.Text = "Detalii salariat";
             // 
+            // tiparireFluturasButton
+            // 
+            this.tiparireFluturasButton.Location = new System.Drawing.Point(207, 353);
+            this.tiparireFluturasButton.Name = "tiparireFluturasButton";
+            this.tiparireFluturasButton.Size = new System.Drawing.Size(123, 23);
+            this.tiparireFluturasButton.TabIndex = 9;
+            this.tiparireFluturasButton.Text = "Tipărire fluturaș salariu";
+            this.tiparireFluturasButton.UseVisualStyleBackColor = true;
+            this.tiparireFluturasButton.Click += new System.EventHandler(this.tiparireFluturasButton_Click);
+            // 
             // stergeSalariatButton
             // 
-            this.stergeSalariatButton.Location = new System.Drawing.Point(111, 341);
+            this.stergeSalariatButton.Location = new System.Drawing.Point(111, 353);
             this.stergeSalariatButton.Name = "stergeSalariatButton";
             this.stergeSalariatButton.Size = new System.Drawing.Size(90, 23);
             this.stergeSalariatButton.TabIndex = 8;
@@ -229,7 +242,7 @@
             // 
             // modificaSalariatButton
             // 
-            this.modificaSalariatButton.Location = new System.Drawing.Point(13, 341);
+            this.modificaSalariatButton.Location = new System.Drawing.Point(13, 353);
             this.modificaSalariatButton.Name = "modificaSalariatButton";
             this.modificaSalariatButton.Size = new System.Drawing.Size(92, 23);
             this.modificaSalariatButton.TabIndex = 7;
@@ -264,7 +277,7 @@
             this.tableLayoutPanel1.Controls.Add(this.sporLabel, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.salariuLabel, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 100);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 112);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -287,7 +300,7 @@
             this.viratCardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.viratCardLabel.Location = new System.Drawing.Point(116, 211);
             this.viratCardLabel.Name = "viratCardLabel";
-            this.viratCardLabel.Size = new System.Drawing.Size(97, 16);
+            this.viratCardLabel.Size = new System.Drawing.Size(95, 16);
             this.viratCardLabel.TabIndex = 24;
             this.viratCardLabel.Text = "Salariu bază";
             // 
@@ -297,7 +310,7 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label23.Location = new System.Drawing.Point(4, 211);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 16);
+            this.label23.Size = new System.Drawing.Size(75, 16);
             this.label23.TabIndex = 23;
             this.label23.Text = "Virat card";
             // 
@@ -487,7 +500,7 @@
             // 
             this.functieLabel.AutoSize = true;
             this.functieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.functieLabel.Location = new System.Drawing.Point(8, 61);
+            this.functieLabel.Location = new System.Drawing.Point(110, 48);
             this.functieLabel.Name = "functieLabel";
             this.functieLabel.Size = new System.Drawing.Size(62, 20);
             this.functieLabel.TabIndex = 1;
@@ -497,7 +510,7 @@
             // 
             this.numeLabel.AutoSize = true;
             this.numeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numeLabel.Location = new System.Drawing.Point(6, 32);
+            this.numeLabel.Location = new System.Drawing.Point(106, 19);
             this.numeLabel.Name = "numeLabel";
             this.numeLabel.Size = new System.Drawing.Size(78, 29);
             this.numeLabel.TabIndex = 0;
@@ -778,29 +791,33 @@
             // despreToolStripMenuItem
             // 
             this.despreToolStripMenuItem.Name = "despreToolStripMenuItem";
-            this.despreToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.despreToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.despreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.despreToolStripMenuItem.Text = "Despre";
+            this.despreToolStripMenuItem.Click += new System.EventHandler(this.despreToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(107, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // ajutorToolStripMenuItem
             // 
             this.ajutorToolStripMenuItem.Name = "ajutorToolStripMenuItem";
-            this.ajutorToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.ajutorToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.ajutorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ajutorToolStripMenuItem.Text = "Ajutor";
+            this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
             // 
-            // tiparireFluturasButton
+            // pictureBox
             // 
-            this.tiparireFluturasButton.Location = new System.Drawing.Point(207, 341);
-            this.tiparireFluturasButton.Name = "tiparireFluturasButton";
-            this.tiparireFluturasButton.Size = new System.Drawing.Size(123, 23);
-            this.tiparireFluturasButton.TabIndex = 9;
-            this.tiparireFluturasButton.Text = "Tipărire fluturaș salariu";
-            this.tiparireFluturasButton.UseVisualStyleBackColor = true;
-            this.tiparireFluturasButton.Click += new System.EventHandler(this.tiparireFluturasButton_Click);
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Location = new System.Drawing.Point(11, 19);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 10;
+            this.pictureBox.TabStop = false;
             // 
             // nrcrtDataGridViewTextBoxColumn
             // 
@@ -941,6 +958,7 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1027,6 +1045,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cASSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn retineriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn viratCardDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using Calculator_Salariu.DAL.Model;
 using Calculator_Salariu.UI.CalculatorSalarii;
 using Calculator_Salariu.UI.CalculatorSalarii.Forms;
+using Calculator_Salariu.Utils;
 using System;
 using System.Windows.Forms;
 
@@ -55,7 +56,7 @@ namespace Calculator_Salariu
         {
             if (parolaNouaTextBox.Text.Equals(parolaNouaConfirmaTextBox.Text))
             {
-                var result = CalculatorViewModel.ModificaParola(parolaNouaTextBox.Text, parolaActualaTextBox.Text);
+                var result = CalculatorViewModel.ModificaParola(CryptoUtils.GetHashString(parolaNouaTextBox.Text), CryptoUtils.GetHashString(parolaActualaTextBox.Text));
 
                 switch (result)
                 {
@@ -171,6 +172,18 @@ namespace Calculator_Salariu
 
         }
 
+        private void ajutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new Ajutor();
+            form.ShowDialog();
+        }
+
+        private void despreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new Despre();
+            form.ShowDialog();
+        }
+
         #endregion Events
 
         #region Private Functionality
@@ -274,6 +287,17 @@ namespace Calculator_Salariu
             viratCardLabel.Text = (salariat.ViratCard ?? 0) + " RON";
 
             tableLayoutPanel1.Visible = true;
+
+            if (salariat.Imagine != null)
+            {
+                var imagine = ImageUtils.ConvertByteToImage(salariat.Imagine);
+
+                pictureBox.Image = imagine;
+            }
+            else
+            {
+                pictureBox.Image = null;
+            }
         }
 
 

@@ -22,6 +22,7 @@
     <Property Name="CASS" Type="Int32" Nullable="true" />
     <Property Name="Retineri" Type="Int32" Nullable="false" DefaultValue="0" />
     <Property Name="ViratCard" Type="Int32" Nullable="true" />
+    <Property Name="Imagine" Type="Binary" Nullable="true" />
   </EntityType>
   <EntityType Name="Parametrii">
     <Key>

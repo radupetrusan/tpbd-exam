@@ -1,4 +1,5 @@
 ﻿using Calculator_Salariu.DAL.Model;
+using Calculator_Salariu.Utils;
 using System;
 using System.Windows.Forms;
 
@@ -24,7 +25,7 @@ namespace Calculator_Salariu.UI.CalculatorSalarii.Forms
             Parametrii.CAS = (double)casNumeric.Value / 100;
             Parametrii.CASS = (double)cassNumeric.Value / 100;
             Parametrii.Impozit = (double)impozitNumeric.Value / 100;
-            Parametrii.Parola = parolaTextBox.Text;
+            Parametrii.Parola = CryptoUtils.GetHashString(parolaTextBox.Text);
         }
 
         private void parolaTextBox_TextChanged(object sender, EventArgs e)

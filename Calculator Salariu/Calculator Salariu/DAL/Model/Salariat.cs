@@ -36,5 +36,6 @@ namespace Calculator_Salariu.DAL.Model
         public Nullable<int> CASS { get; set; }
         public int Retineri { get; set; }
         public Nullable<int> ViratCard { get; set; }
+        public byte[] Imagine { get; set; }
     }
 }

@@ -45,15 +45,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.salvareSalariatButton = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.browseImageButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.retineriNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.premiiBruteNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sporNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariuBazaNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.browseImageButton);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.pictureBox);
             this.groupBox1.Controls.Add(this.retineriNumeric);
             this.groupBox1.Controls.Add(this.premiiBruteNumeric);
             this.groupBox1.Controls.Add(this.sporNumeric);
@@ -70,7 +77,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 213);
+            this.groupBox1.Size = new System.Drawing.Size(260, 399);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Salariat nou";
@@ -210,7 +217,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.button1.Location = new System.Drawing.Point(197, 231);
+            this.button1.Location = new System.Drawing.Point(197, 417);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -220,7 +227,7 @@
             // salvareSalariatButton
             // 
             this.salvareSalariatButton.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.salvareSalariatButton.Location = new System.Drawing.Point(120, 231);
+            this.salvareSalariatButton.Location = new System.Drawing.Point(120, 417);
             this.salvareSalariatButton.Name = "salvareSalariatButton";
             this.salvareSalariatButton.Size = new System.Drawing.Size(71, 23);
             this.salvareSalariatButton.TabIndex = 2;
@@ -228,11 +235,38 @@
             this.salvareSalariatButton.UseVisualStyleBackColor = true;
             this.salvareSalariatButton.Click += new System.EventHandler(this.salvareSalariatButton_Click);
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(48, 228);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(165, 165);
+            this.pictureBox.TabIndex = 14;
+            this.pictureBox.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(39, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Imagine";
+            // 
+            // browseImageButton
+            // 
+            this.browseImageButton.Location = new System.Drawing.Point(89, 198);
+            this.browseImageButton.Name = "browseImageButton";
+            this.browseImageButton.Size = new System.Drawing.Size(75, 23);
+            this.browseImageButton.TabIndex = 16;
+            this.browseImageButton.Text = "Browse..";
+            this.browseImageButton.UseVisualStyleBackColor = true;
+            this.browseImageButton.Click += new System.EventHandler(this.browseImageButton_Click);
+            // 
             // AdaugaSalariat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 269);
+            this.ClientSize = new System.Drawing.Size(284, 452);
             this.Controls.Add(this.salvareSalariatButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -244,6 +278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.premiiBruteNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sporNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariuBazaNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +302,8 @@
         private System.Windows.Forms.TextBox functieTextBox;
         private System.Windows.Forms.TextBox prenumeTextBox;
         private System.Windows.Forms.TextBox numeTextBox;
+        private System.Windows.Forms.Button browseImageButton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }

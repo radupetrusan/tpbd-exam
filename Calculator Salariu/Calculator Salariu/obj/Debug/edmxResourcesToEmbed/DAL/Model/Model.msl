@@ -18,6 +18,7 @@
           <ScalarProperty Name="CASS" ColumnName="CASS" />
           <ScalarProperty Name="Retineri" ColumnName="Retineri" />
           <ScalarProperty Name="ViratCard" ColumnName="ViratCard" />
+          <ScalarProperty Name="Imagine" ColumnName="Imagine" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

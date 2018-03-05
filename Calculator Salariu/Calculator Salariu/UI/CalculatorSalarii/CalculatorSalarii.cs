@@ -85,7 +85,7 @@ namespace Calculator_Salariu
 
         private void adaugaSalariatButton_Click(object sender, EventArgs e)
         {
-            var form = new AdaugaSalariat();
+            var form = new AdaugaSalariat(null);
 
             if (form.ShowDialog() == DialogResult.Yes)
             {
@@ -184,6 +184,18 @@ namespace Calculator_Salariu
             form.ShowDialog();
         }
 
+        private void modificaSalariatButton_Click(object sender, EventArgs e)
+        {
+            var form = new AdaugaSalariat(CalculatorViewModel.SalariatSelectat);
+            
+            if (form.ShowDialog() == DialogResult.Yes)
+            {
+                CalculatorViewModel.ModificaSalariat(form.Salariat);
+                CalculatorViewModel.IncarcaSalariatii();
+                SyncDataEvidenta();
+            }
+        }
+
         #endregion Events
 
         #region Private Functionality
@@ -240,6 +252,8 @@ namespace Calculator_Salariu
                 salarImpozabil += s.BrutImpozabil ?? 0;
             });
 
+            spor = spor / CalculatorViewModel.SalariatiFiltrati.Count;
+
             var salariat = new Salariat
             {
                 Nume = "",
@@ -276,7 +290,7 @@ namespace Calculator_Salariu
             tableLayoutPanel1.Visible = false;
 
             salariuLabel.Text = salariat.SalariuBaza + " RON";
-            sporLabel.Text = salariat.ProcentSpor + " RON";
+            sporLabel.Text = salariat.ProcentSpor + " %";
             premiiBruteLabel.Text = salariat.PremiiBrute + " RON";
             totalBrutLabel.Text = (salariat.TotalBrut ?? 0) + " RON";
             brutImpozabilLabel.Text = (salariat.BrutImpozabil ?? 0) + " RON";

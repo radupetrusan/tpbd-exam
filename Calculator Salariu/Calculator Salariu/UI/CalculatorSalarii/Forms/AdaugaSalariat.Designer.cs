@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.browseImageButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.retineriNumeric = new System.Windows.Forms.NumericUpDown();
             this.premiiBruteNumeric = new System.Windows.Forms.NumericUpDown();
             this.sporNumeric = new System.Windows.Forms.NumericUpDown();
@@ -45,15 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.salvareSalariatButton = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.browseImageButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.retineriNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.premiiBruteNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sporNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariuBazaNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -81,6 +81,34 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Salariat nou";
+            // 
+            // browseImageButton
+            // 
+            this.browseImageButton.Location = new System.Drawing.Point(89, 198);
+            this.browseImageButton.Name = "browseImageButton";
+            this.browseImageButton.Size = new System.Drawing.Size(75, 23);
+            this.browseImageButton.TabIndex = 16;
+            this.browseImageButton.Text = "Browse..";
+            this.browseImageButton.UseVisualStyleBackColor = true;
+            this.browseImageButton.Click += new System.EventHandler(this.browseImageButton_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(39, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Imagine";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(48, 228);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(165, 165);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 14;
+            this.pictureBox.TabStop = false;
             // 
             // retineriNumeric
             // 
@@ -235,33 +263,6 @@
             this.salvareSalariatButton.UseVisualStyleBackColor = true;
             this.salvareSalariatButton.Click += new System.EventHandler(this.salvareSalariatButton_Click);
             // 
-            // pictureBox
-            // 
-            this.pictureBox.Location = new System.Drawing.Point(48, 228);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(165, 165);
-            this.pictureBox.TabIndex = 14;
-            this.pictureBox.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(39, 203);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Imagine";
-            // 
-            // browseImageButton
-            // 
-            this.browseImageButton.Location = new System.Drawing.Point(89, 198);
-            this.browseImageButton.Name = "browseImageButton";
-            this.browseImageButton.Size = new System.Drawing.Size(75, 23);
-            this.browseImageButton.TabIndex = 16;
-            this.browseImageButton.Text = "Browse..";
-            this.browseImageButton.UseVisualStyleBackColor = true;
-            this.browseImageButton.Click += new System.EventHandler(this.browseImageButton_Click);
-            // 
             // AdaugaSalariat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,11 +275,11 @@
             this.Text = "Adaugă salariat";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.retineriNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.premiiBruteNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sporNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariuBazaNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

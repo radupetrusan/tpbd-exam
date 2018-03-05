@@ -14,11 +14,43 @@ namespace Calculator_Salariu.UI.CalculatorSalarii.Forms
 {
     public partial class AdaugaSalariat : Form
     {
-        public AdaugaSalariat()
+        public AdaugaSalariat(Salariat salariat)
         {
             InitializeComponent();
 
-            Salariat = new Salariat();
+            if (salariat != null)
+            {
+                Salariat = salariat;
+
+                numeTextBox.Text = Salariat.Nume;
+                prenumeTextBox.Text = Salariat.Prenume;
+                functieTextBox.Text = Salariat.Functie;
+                salariuBazaNumeric.Value = Salariat.SalariuBaza;
+                sporNumeric.Value = Salariat.ProcentSpor;
+                premiiBruteNumeric.Value = Salariat.PremiiBrute;
+                retineriNumeric.Value = Salariat.Retineri;
+
+                if (Salariat.Imagine != null)
+                {
+                    try
+                    {
+                        var image = ImageUtils.ConvertByteToImage(Salariat.Imagine);
+
+                        pictureBox.Image = image;
+                    }
+                    catch
+                    {
+
+                    }
+                    
+                }
+
+                this.Text = "Modifică salariat";
+            }
+            else
+            {
+                Salariat = new Salariat();
+            }
         }
 
         public Salariat Salariat { get; set; }
@@ -46,7 +78,6 @@ namespace Calculator_Salariu.UI.CalculatorSalarii.Forms
                 if (!string.IsNullOrWhiteSpace(dialog.FileName))
                 {
                     pictureBox.ImageLocation = dialog.FileName;
-                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
                     Salariat.Imagine = ImageUtils.ConvertFileToByte(pictureBox.ImageLocation);
                 }

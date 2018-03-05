@@ -54,6 +54,8 @@ namespace Calculator_Salariu.DAL
                         salariatExistent.Retineri = salariat.Retineri;
                         salariatExistent.PremiiBrute = salariat.PremiiBrute;
 
+                        salariatExistent.Imagine = salariat.Imagine;
+
                         model.SaveChanges();
                     }
 

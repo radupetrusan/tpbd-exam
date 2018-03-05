@@ -47,6 +47,7 @@
             this.cautareTextBox = new System.Windows.Forms.TextBox();
             this.salveazaModificarileButton = new System.Windows.Forms.Button();
             this.detaliiSalariatGroup = new System.Windows.Forms.GroupBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tiparireFluturasButton = new System.Windows.Forms.Button();
             this.stergeSalariatButton = new System.Windows.Forms.Button();
             this.modificaSalariatButton = new System.Windows.Forms.Button();
@@ -103,7 +104,6 @@
             this.despreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.nrcrtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,13 +122,13 @@
             this.tabControl.SuspendLayout();
             this.evidentaTab.SuspendLayout();
             this.detaliiSalariatGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salariatiGridView)).BeginInit();
             this.configurareTab.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,7 +143,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 27);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1094, 760);
+            this.tabControl.Size = new System.Drawing.Size(1094, 672);
             this.tabControl.TabIndex = 0;
             // 
             // evidentaTab
@@ -159,7 +159,7 @@
             this.evidentaTab.Location = new System.Drawing.Point(4, 22);
             this.evidentaTab.Name = "evidentaTab";
             this.evidentaTab.Padding = new System.Windows.Forms.Padding(3);
-            this.evidentaTab.Size = new System.Drawing.Size(1086, 734);
+            this.evidentaTab.Size = new System.Drawing.Size(1086, 646);
             this.evidentaTab.TabIndex = 1;
             this.evidentaTab.Text = "Evidență";
             this.evidentaTab.UseVisualStyleBackColor = true;
@@ -213,16 +213,26 @@
             this.detaliiSalariatGroup.Controls.Add(this.tableLayoutPanel1);
             this.detaliiSalariatGroup.Controls.Add(this.functieLabel);
             this.detaliiSalariatGroup.Controls.Add(this.numeLabel);
-            this.detaliiSalariatGroup.Location = new System.Drawing.Point(8, 314);
+            this.detaliiSalariatGroup.Location = new System.Drawing.Point(8, 291);
             this.detaliiSalariatGroup.Name = "detaliiSalariatGroup";
             this.detaliiSalariatGroup.Size = new System.Drawing.Size(1072, 385);
             this.detaliiSalariatGroup.TabIndex = 2;
             this.detaliiSalariatGroup.TabStop = false;
             this.detaliiSalariatGroup.Text = "Detalii salariat";
             // 
+            // pictureBox
+            // 
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Location = new System.Drawing.Point(11, 19);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 10;
+            this.pictureBox.TabStop = false;
+            // 
             // tiparireFluturasButton
             // 
-            this.tiparireFluturasButton.Location = new System.Drawing.Point(207, 353);
+            this.tiparireFluturasButton.Location = new System.Drawing.Point(305, 75);
             this.tiparireFluturasButton.Name = "tiparireFluturasButton";
             this.tiparireFluturasButton.Size = new System.Drawing.Size(123, 23);
             this.tiparireFluturasButton.TabIndex = 9;
@@ -232,7 +242,7 @@
             // 
             // stergeSalariatButton
             // 
-            this.stergeSalariatButton.Location = new System.Drawing.Point(111, 353);
+            this.stergeSalariatButton.Location = new System.Drawing.Point(209, 75);
             this.stergeSalariatButton.Name = "stergeSalariatButton";
             this.stergeSalariatButton.Size = new System.Drawing.Size(90, 23);
             this.stergeSalariatButton.TabIndex = 8;
@@ -242,12 +252,13 @@
             // 
             // modificaSalariatButton
             // 
-            this.modificaSalariatButton.Location = new System.Drawing.Point(13, 353);
+            this.modificaSalariatButton.Location = new System.Drawing.Point(111, 75);
             this.modificaSalariatButton.Name = "modificaSalariatButton";
             this.modificaSalariatButton.Size = new System.Drawing.Size(92, 23);
             this.modificaSalariatButton.TabIndex = 7;
             this.modificaSalariatButton.Text = "Modifică salariat";
             this.modificaSalariatButton.UseVisualStyleBackColor = true;
+            this.modificaSalariatButton.Click += new System.EventHandler(this.modificaSalariatButton_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -500,7 +511,7 @@
             // 
             this.functieLabel.AutoSize = true;
             this.functieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.functieLabel.Location = new System.Drawing.Point(110, 48);
+            this.functieLabel.Location = new System.Drawing.Point(107, 48);
             this.functieLabel.Name = "functieLabel";
             this.functieLabel.Size = new System.Drawing.Size(62, 20);
             this.functieLabel.TabIndex = 1;
@@ -529,7 +540,7 @@
             // 
             // adaugaSalariatButton
             // 
-            this.adaugaSalariatButton.Location = new System.Drawing.Point(8, 705);
+            this.adaugaSalariatButton.Location = new System.Drawing.Point(344, 7);
             this.adaugaSalariatButton.Name = "adaugaSalariatButton";
             this.adaugaSalariatButton.Size = new System.Drawing.Size(131, 23);
             this.adaugaSalariatButton.TabIndex = 1;
@@ -572,7 +583,7 @@
             this.salariatiGridView.DataSource = this.salariatBindingSource;
             this.salariatiGridView.Location = new System.Drawing.Point(8, 36);
             this.salariatiGridView.Name = "salariatiGridView";
-            this.salariatiGridView.Size = new System.Drawing.Size(1072, 272);
+            this.salariatiGridView.Size = new System.Drawing.Size(1072, 249);
             this.salariatiGridView.TabIndex = 0;
             this.salariatiGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salariatiGridView_CellContentDoubleClick);
             this.salariatiGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.salariatiGridView_RowEnter);
@@ -581,7 +592,7 @@
             // 
             this.tiparireTab.Location = new System.Drawing.Point(4, 22);
             this.tiparireTab.Name = "tiparireTab";
-            this.tiparireTab.Size = new System.Drawing.Size(1086, 734);
+            this.tiparireTab.Size = new System.Drawing.Size(1086, 646);
             this.tiparireTab.TabIndex = 2;
             this.tiparireTab.Text = "Tipărire";
             this.tiparireTab.UseVisualStyleBackColor = true;
@@ -593,7 +604,7 @@
             this.configurareTab.Controls.Add(this.groupBox1);
             this.configurareTab.Location = new System.Drawing.Point(4, 22);
             this.configurareTab.Name = "configurareTab";
-            this.configurareTab.Size = new System.Drawing.Size(1086, 734);
+            this.configurareTab.Size = new System.Drawing.Size(1086, 646);
             this.configurareTab.TabIndex = 3;
             this.configurareTab.Text = "Configurare";
             this.configurareTab.UseVisualStyleBackColor = true;
@@ -809,16 +820,6 @@
             this.ajutorToolStripMenuItem.Text = "Ajutor";
             this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
             // 
-            // pictureBox
-            // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(11, 19);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(90, 90);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 10;
-            this.pictureBox.TabStop = false;
-            // 
             // nrcrtDataGridViewTextBoxColumn
             // 
             this.nrcrtDataGridViewTextBoxColumn.DataPropertyName = "Nr_crt";
@@ -938,7 +939,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 799);
+            this.ClientSize = new System.Drawing.Size(1106, 711);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
             this.Name = "CalculatorSalarii";
@@ -948,6 +949,7 @@
             this.evidentaTab.PerformLayout();
             this.detaliiSalariatGroup.ResumeLayout(false);
             this.detaliiSalariatGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salariatiGridView)).EndInit();
@@ -958,7 +960,6 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

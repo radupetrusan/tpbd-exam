@@ -196,6 +196,20 @@ namespace Calculator_Salariu
             }
         }
 
+        private void CalculatorSalarii_Load(object sender, EventArgs e)
+        {
+            this.reportViewer.RefreshReport();
+        }
+
+        private void fluturasSalariiButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void statPlataButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion Events
 
         #region Private Functionality

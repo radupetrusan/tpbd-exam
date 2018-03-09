@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -104,6 +105,9 @@
             this.despreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.fluturasSalariiButton = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.nrcrtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,16 +123,19 @@
             this.retineriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viratCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salariatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statPlataButton = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.evidentaTab.SuspendLayout();
             this.detaliiSalariatGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salariatiGridView)).BeginInit();
+            this.tiparireTab.SuspendLayout();
             this.configurareTab.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -590,11 +597,13 @@
             // 
             // tiparireTab
             // 
+            this.tiparireTab.Controls.Add(this.groupBox3);
+            this.tiparireTab.Controls.Add(this.reportViewer);
             this.tiparireTab.Location = new System.Drawing.Point(4, 22);
             this.tiparireTab.Name = "tiparireTab";
             this.tiparireTab.Size = new System.Drawing.Size(1086, 646);
             this.tiparireTab.TabIndex = 2;
-            this.tiparireTab.Text = "Tipărire";
+            this.tiparireTab.Text = "Rapoarte";
             this.tiparireTab.UseVisualStyleBackColor = true;
             // 
             // configurareTab
@@ -820,6 +829,43 @@
             this.ajutorToolStripMenuItem.Text = "Ajutor";
             this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
             // 
+            // reportViewer
+            // 
+            this.reportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "SalariatiDataSet";
+            reportDataSource1.Value = this.salariatBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "Calculator_Salariu.Reports.FluturasSalariu.FluturasSalariuReport.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(214, 3);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.Size = new System.Drawing.Size(869, 647);
+            this.reportViewer.TabIndex = 0;
+            // 
+            // fluturasSalariiButton
+            // 
+            this.fluturasSalariiButton.Location = new System.Drawing.Point(6, 19);
+            this.fluturasSalariiButton.Name = "fluturasSalariiButton";
+            this.fluturasSalariiButton.Size = new System.Drawing.Size(188, 23);
+            this.fluturasSalariiButton.TabIndex = 1;
+            this.fluturasSalariiButton.Text = "Fluturaș salarii";
+            this.fluturasSalariiButton.UseVisualStyleBackColor = true;
+            this.fluturasSalariiButton.Click += new System.EventHandler(this.fluturasSalariiButton_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Controls.Add(this.statPlataButton);
+            this.groupBox3.Controls.Add(this.fluturasSalariiButton);
+            this.groupBox3.Location = new System.Drawing.Point(8, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 640);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Rapoarte";
+            // 
             // nrcrtDataGridViewTextBoxColumn
             // 
             this.nrcrtDataGridViewTextBoxColumn.DataPropertyName = "Nr_crt";
@@ -935,6 +981,16 @@
             // 
             this.salariatBindingSource.DataSource = typeof(Calculator_Salariu.DAL.Model.Salariat);
             // 
+            // statPlataButton
+            // 
+            this.statPlataButton.Location = new System.Drawing.Point(6, 48);
+            this.statPlataButton.Name = "statPlataButton";
+            this.statPlataButton.Size = new System.Drawing.Size(188, 23);
+            this.statPlataButton.TabIndex = 2;
+            this.statPlataButton.Text = "Stat de plată";
+            this.statPlataButton.UseVisualStyleBackColor = true;
+            this.statPlataButton.Click += new System.EventHandler(this.statPlataButton_Click);
+            // 
             // CalculatorSalarii
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -944,6 +1000,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "CalculatorSalarii";
             this.Text = "Calculator salarii";
+            this.Load += new System.EventHandler(this.CalculatorSalarii_Load);
             this.tabControl.ResumeLayout(false);
             this.evidentaTab.ResumeLayout(false);
             this.evidentaTab.PerformLayout();
@@ -953,6 +1010,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salariatiGridView)).EndInit();
+            this.tiparireTab.ResumeLayout(false);
             this.configurareTab.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -960,6 +1018,7 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1047,6 +1106,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn retineriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn viratCardDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button fluturasSalariiButton;
+        private System.Windows.Forms.Button statPlataButton;
     }
 }
 

@@ -13,3 +13,9 @@ E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.CalculatorSalarii.resources
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.ModificaParametrii.resources
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.AdaugaSalariat.resources
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\RdlCompile.cache
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\RdlCompile.compiled
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.SelectarePerioada.resources
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Reports\StatPlata\StatPlataReport.rdlc
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Reports\FluturasSalariu\FluturasSalariuReport.rdlc

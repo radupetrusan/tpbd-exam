@@ -7,7 +7,7 @@ using System.Security.Permissions;
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, UnmanagedCode = true)]
 namespace System.Windows.Forms
 {
-	public class MessageBoxManager
+	public class MessageBoxUtils
 	{
         private delegate IntPtr HookProc(int nCode, IntPtr wParam, IntPtr lParam);
         private delegate bool EnumChildProc(IntPtr hWnd, IntPtr lParam);
@@ -111,7 +111,7 @@ namespace System.Windows.Forms
         /// </summary>
         public static string No = "&No";
 
-		static MessageBoxManager()
+		static MessageBoxUtils()
 		{
 			hookProc = new HookProc(MessageBoxHookProc);
             enumProc = new EnumChildProc(MessageBoxEnumProc);

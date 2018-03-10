@@ -51,6 +51,11 @@ namespace Calculator_Salariu.UI.CalculatorSalarii
             Filtrare();
         }
 
+        public List<Salariat> GetSalariati()
+        {
+            return DataService.GetSalariati();
+        }
+
         public void Filtrare()
         {
             if (string.IsNullOrWhiteSpace(Filtru))

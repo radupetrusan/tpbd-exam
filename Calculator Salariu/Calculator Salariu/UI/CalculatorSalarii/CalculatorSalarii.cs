@@ -3,6 +3,7 @@ using Calculator_Salariu.UI.CalculatorSalarii;
 using Calculator_Salariu.UI.CalculatorSalarii.Forms;
 using Calculator_Salariu.Utils;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Calculator_Salariu
@@ -113,7 +114,7 @@ namespace Calculator_Salariu
         private void salariatiGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             CalculatorViewModel.SalariatSelectat = (Salariat)salariatBindingSource[e.RowIndex];
-            
+
             SyncDataDetaliiSalariat(CalculatorViewModel.SalariatSelectat);
         }
 
@@ -169,7 +170,12 @@ namespace Calculator_Salariu
 
         private void tiparireFluturasButton_Click(object sender, EventArgs e)
         {
+            var form = new SelectarePerioada();
 
+            if (form.ShowDialog() == DialogResult.Yes)
+            {
+
+            }
         }
 
         private void ajutorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -187,7 +193,7 @@ namespace Calculator_Salariu
         private void modificaSalariatButton_Click(object sender, EventArgs e)
         {
             var form = new AdaugaSalariat(CalculatorViewModel.SalariatSelectat);
-            
+
             if (form.ShowDialog() == DialogResult.Yes)
             {
                 CalculatorViewModel.ModificaSalariat(form.Salariat);
@@ -198,16 +204,47 @@ namespace Calculator_Salariu
 
         private void CalculatorSalarii_Load(object sender, EventArgs e)
         {
-            this.reportViewer.RefreshReport();
+            reportViewer.RefreshReport();
         }
 
         private void fluturasSalariiButton_Click(object sender, EventArgs e)
         {
+            var form = new SelectarePerioada();
+            if (form.ShowDialog() == DialogResult.Yes)
+            {
+                var salariati = CalculatorViewModel.GetSalariati();
+
+                var directory = AppDomain.CurrentDomain.BaseDirectory;
+                var path = Path.Combine(directory, "Reports\\FluturasSalariu\\FluturasSalariuReport.rdlc");
+
+                ReportUtils.RefreshReport(reportViewer, salariati, path);
+
+                reportViewer.Visible = true;
+                inchideReportButton.Visible = true;
+            }
         }
 
         private void statPlataButton_Click(object sender, EventArgs e)
         {
+            var form = new SelectarePerioada();
+            if (form.ShowDialog() == DialogResult.Yes)
+            {
+                var salariati = CalculatorViewModel.GetSalariati();
 
+                var directory = AppDomain.CurrentDomain.BaseDirectory;
+                var path = Path.Combine(directory, "Reports\\StatPlata\\StatPlataReport.rdlc");
+
+                ReportUtils.RefreshReport(reportViewer, salariati, path);
+
+                reportViewer.Visible = true;
+                inchideReportButton.Visible = true;
+            }
+        }
+
+        private void inchideReportButton_Click(object sender, EventArgs e)
+        {
+            inchideReportButton.Visible = false;
+            reportViewer.Visible = false;
         }
 
         #endregion Events
@@ -251,7 +288,8 @@ namespace Calculator_Salariu
 
             salariatBindingSource.Clear();
 
-            CalculatorViewModel.SalariatiFiltrati.ForEach(s => {
+            CalculatorViewModel.SalariatiFiltrati.ForEach(s =>
+            {
                 salariatBindingSource.Add(s);
 
                 salariuBaza += s.SalariuBaza;

@@ -23,10 +23,10 @@ namespace Calculator_Salariu
 
         private static void Initialize()
         {
-            MessageBoxManager.OK = "OK";
-            MessageBoxManager.Yes = "Da";
-            MessageBoxManager.No = "Nu";
-            MessageBoxManager.Register();
+            MessageBoxUtils.OK = "OK";
+            MessageBoxUtils.Yes = "Da";
+            MessageBoxUtils.No = "Nu";
+            MessageBoxUtils.Register();
         }
     }
 }

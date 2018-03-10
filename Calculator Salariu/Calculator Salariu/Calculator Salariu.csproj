@@ -116,10 +116,22 @@
     <Compile Include="UI\CalculatorSalarii\Forms\ModificaParametrii.Designer.cs">
       <DependentUpon>ModificaParametrii.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\SelectarePerioada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\SelectarePerioada.Designer.cs">
+      <DependentUpon>SelectarePerioada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\CryptoUtils.cs" />
     <Compile Include="Utils\ImageUtils.cs" />
-    <Compile Include="Utils\MessageBoxManager.cs" />
-    <EmbeddedResource Include="Reports\FluturasSalariu\FluturasSalariuReport.rdlc" />
+    <Compile Include="Utils\MessageBoxUtils.cs" />
+    <Compile Include="Utils\ReportUtils.cs" />
+    <EmbeddedResource Include="Reports\StatPlata\StatPlataReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FluturasSalariu\FluturasSalariuReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CalculatorSalarii\CalculatorSalarii.resx">
       <DependentUpon>CalculatorSalarii.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CalculatorSalarii\Forms\ModificaParametrii.resx">
       <DependentUpon>ModificaParametrii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CalculatorSalarii\Forms\SelectarePerioada.resx">
+      <DependentUpon>SelectarePerioada.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DAL\Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -32,6 +32,8 @@ namespace Calculator_Salariu.Utils
 
             report.LocalReport.SetParameters(parameters);
 
+            report.ResetPageSettings();
+
             //report.ResetPageSettings();
             report.RefreshReport();
             report.LocalReport.Refresh();

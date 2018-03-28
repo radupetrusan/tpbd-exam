@@ -3,6 +3,7 @@ using Calculator_Salariu.UI.CalculatorSalarii;
 using Calculator_Salariu.UI.CalculatorSalarii.Forms;
 using Calculator_Salariu.Utils;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -174,7 +175,17 @@ namespace Calculator_Salariu
 
             if (form.ShowDialog() == DialogResult.Yes)
             {
+                var vizualizareForm = new VizualizareRaport();
+                var salariati = new List<Salariat>() { CalculatorViewModel.SalariatSelectat };
+                
+                var directory = AppDomain.CurrentDomain.BaseDirectory;
+                var path = Path.Combine(directory, "Reports\\FluturasSalariu\\FluturasSalariuReport.rdlc");
 
+                ReportUtils.RefreshReport(vizualizareForm.reportViewer1, salariati, path, form.An, form.Luna);
+
+                vizualizareForm.reportViewer1.Visible = true;
+
+                vizualizareForm.ShowDialog();
             }
         }
 

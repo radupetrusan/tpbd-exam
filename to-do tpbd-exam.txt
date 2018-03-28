@@ -1,7 +1,5 @@
 To-do app angajati
 
--editare individuala salariati
--rapoarte
 -ecran ajutor
 -ecran despre
 -mesaje de eroare/succes/informare
@@ -16,3 +14,5 @@ Done
 -script pentru adaugarea datelor prestabilite
 -criptare parola
 -adaugare poza salariati
+-rapoarte
+-editare individuala salariati

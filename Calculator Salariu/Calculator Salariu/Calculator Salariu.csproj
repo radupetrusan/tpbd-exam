@@ -122,6 +122,12 @@
     <Compile Include="UI\CalculatorSalarii\Forms\SelectarePerioada.Designer.cs">
       <DependentUpon>SelectarePerioada.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\VizualizareRaport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CalculatorSalarii\Forms\VizualizareRaport.Designer.cs">
+      <DependentUpon>VizualizareRaport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\CryptoUtils.cs" />
     <Compile Include="Utils\ImageUtils.cs" />
     <Compile Include="Utils\MessageBoxUtils.cs" />
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CalculatorSalarii\Forms\SelectarePerioada.resx">
       <DependentUpon>SelectarePerioada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CalculatorSalarii\Forms\VizualizareRaport.resx">
+      <DependentUpon>VizualizareRaport.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DAL\Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

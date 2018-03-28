@@ -19,3 +19,4 @@ E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.SelectarePerioada.resources
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Reports\StatPlata\StatPlataReport.rdlc
 E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\bin\Debug\Reports\FluturasSalariu\FluturasSalariuReport.rdlc
+E:\Radu\Faculta\Anul 4\TPBD\tpbd-exam\Calculator Salariu\Calculator Salariu\obj\Debug\Calculator_Salariu.UI.CalculatorSalarii.Forms.VizualizareRaport.resources

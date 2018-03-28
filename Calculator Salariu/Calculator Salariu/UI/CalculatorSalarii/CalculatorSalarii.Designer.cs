@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,6 +40,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.salariatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl = new System.Windows.Forms.TabControl();
             this.evidentaTab = new System.Windows.Forms.TabPage();
             this.refreshButton = new System.Windows.Forms.Button();
@@ -80,10 +81,26 @@
             this.anuleazaModificarileButton = new System.Windows.Forms.Button();
             this.adaugaSalariatButton = new System.Windows.Forms.Button();
             this.salariatiGridView = new System.Windows.Forms.DataGridView();
+            this.nrcrtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.functieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salariuBazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.procentSporDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.premiiBruteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalBrutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brutImpozabilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.impozitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retineriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viratCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiparireTab = new System.Windows.Forms.TabPage();
+            this.inchideReportButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.statPlataButton = new System.Windows.Forms.Button();
             this.fluturasSalariiButton = new System.Windows.Forms.Button();
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.configurareTab = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.schimbaParolaButton = new System.Windows.Forms.Button();
@@ -108,23 +125,7 @@
             this.despreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inchideReportButton = new System.Windows.Forms.Button();
-            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.nrcrtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.functieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salariuBazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.procentSporDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.premiiBruteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalBrutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brutImpozabilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.impozitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retineriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viratCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salariatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).BeginInit();
             this.tabControl.SuspendLayout();
             this.evidentaTab.SuspendLayout();
             this.detaliiSalariatGroup.SuspendLayout();
@@ -137,8 +138,11 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // salariatBindingSource
+            // 
+            this.salariatBindingSource.DataSource = typeof(Calculator_Salariu.DAL.Model.Salariat);
             // 
             // tabControl
             // 
@@ -596,6 +600,117 @@
             this.salariatiGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salariatiGridView_CellContentDoubleClick);
             this.salariatiGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.salariatiGridView_RowEnter);
             // 
+            // nrcrtDataGridViewTextBoxColumn
+            // 
+            this.nrcrtDataGridViewTextBoxColumn.DataPropertyName = "Nr_crt";
+            this.nrcrtDataGridViewTextBoxColumn.HeaderText = "Nr. crt.";
+            this.nrcrtDataGridViewTextBoxColumn.Name = "nrcrtDataGridViewTextBoxColumn";
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            // 
+            // prenumeDataGridViewTextBoxColumn
+            // 
+            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+            // 
+            // functieDataGridViewTextBoxColumn
+            // 
+            this.functieDataGridViewTextBoxColumn.DataPropertyName = "Functie";
+            this.functieDataGridViewTextBoxColumn.HeaderText = "Funcție";
+            this.functieDataGridViewTextBoxColumn.Name = "functieDataGridViewTextBoxColumn";
+            // 
+            // salariuBazaDataGridViewTextBoxColumn
+            // 
+            this.salariuBazaDataGridViewTextBoxColumn.DataPropertyName = "SalariuBaza";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.salariuBazaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.salariuBazaDataGridViewTextBoxColumn.HeaderText = "Salariu bază";
+            this.salariuBazaDataGridViewTextBoxColumn.Name = "salariuBazaDataGridViewTextBoxColumn";
+            // 
+            // procentSporDataGridViewTextBoxColumn
+            // 
+            this.procentSporDataGridViewTextBoxColumn.DataPropertyName = "ProcentSpor";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.procentSporDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.procentSporDataGridViewTextBoxColumn.HeaderText = "Spor (%)";
+            this.procentSporDataGridViewTextBoxColumn.Name = "procentSporDataGridViewTextBoxColumn";
+            // 
+            // premiiBruteDataGridViewTextBoxColumn
+            // 
+            this.premiiBruteDataGridViewTextBoxColumn.DataPropertyName = "PremiiBrute";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.premiiBruteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.premiiBruteDataGridViewTextBoxColumn.HeaderText = "Premii brute";
+            this.premiiBruteDataGridViewTextBoxColumn.Name = "premiiBruteDataGridViewTextBoxColumn";
+            // 
+            // totalBrutDataGridViewTextBoxColumn
+            // 
+            this.totalBrutDataGridViewTextBoxColumn.DataPropertyName = "TotalBrut";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.totalBrutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.totalBrutDataGridViewTextBoxColumn.HeaderText = "Total brut";
+            this.totalBrutDataGridViewTextBoxColumn.Name = "totalBrutDataGridViewTextBoxColumn";
+            this.totalBrutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // brutImpozabilDataGridViewTextBoxColumn
+            // 
+            this.brutImpozabilDataGridViewTextBoxColumn.DataPropertyName = "BrutImpozabil";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.brutImpozabilDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.brutImpozabilDataGridViewTextBoxColumn.HeaderText = "Brut impozabil";
+            this.brutImpozabilDataGridViewTextBoxColumn.Name = "brutImpozabilDataGridViewTextBoxColumn";
+            this.brutImpozabilDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // impozitDataGridViewTextBoxColumn
+            // 
+            this.impozitDataGridViewTextBoxColumn.DataPropertyName = "Impozit";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.impozitDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.impozitDataGridViewTextBoxColumn.HeaderText = "Impozit";
+            this.impozitDataGridViewTextBoxColumn.Name = "impozitDataGridViewTextBoxColumn";
+            this.impozitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cASDataGridViewTextBoxColumn
+            // 
+            this.cASDataGridViewTextBoxColumn.DataPropertyName = "CAS";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.cASDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.cASDataGridViewTextBoxColumn.HeaderText = "CAS";
+            this.cASDataGridViewTextBoxColumn.Name = "cASDataGridViewTextBoxColumn";
+            this.cASDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cASSDataGridViewTextBoxColumn
+            // 
+            this.cASSDataGridViewTextBoxColumn.DataPropertyName = "CASS";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.cASSDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.cASSDataGridViewTextBoxColumn.HeaderText = "CASS";
+            this.cASSDataGridViewTextBoxColumn.Name = "cASSDataGridViewTextBoxColumn";
+            this.cASSDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // retineriDataGridViewTextBoxColumn
+            // 
+            this.retineriDataGridViewTextBoxColumn.DataPropertyName = "Retineri";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.retineriDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.retineriDataGridViewTextBoxColumn.HeaderText = "Rețineri";
+            this.retineriDataGridViewTextBoxColumn.Name = "retineriDataGridViewTextBoxColumn";
+            // 
+            // viratCardDataGridViewTextBoxColumn
+            // 
+            this.viratCardDataGridViewTextBoxColumn.DataPropertyName = "ViratCard";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.viratCardDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.viratCardDataGridViewTextBoxColumn.HeaderText = "Virat card";
+            this.viratCardDataGridViewTextBoxColumn.Name = "viratCardDataGridViewTextBoxColumn";
+            this.viratCardDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // tiparireTab
             // 
             this.tiparireTab.Controls.Add(this.inchideReportButton);
@@ -607,6 +722,19 @@
             this.tiparireTab.TabIndex = 2;
             this.tiparireTab.Text = "Rapoarte";
             this.tiparireTab.UseVisualStyleBackColor = true;
+            // 
+            // inchideReportButton
+            // 
+            this.inchideReportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inchideReportButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.inchideReportButton.Location = new System.Drawing.Point(1058, 4);
+            this.inchideReportButton.Name = "inchideReportButton";
+            this.inchideReportButton.Size = new System.Drawing.Size(23, 23);
+            this.inchideReportButton.TabIndex = 3;
+            this.inchideReportButton.Text = "X";
+            this.inchideReportButton.UseVisualStyleBackColor = true;
+            this.inchideReportButton.Visible = false;
+            this.inchideReportButton.Click += new System.EventHandler(this.inchideReportButton_Click);
             // 
             // groupBox3
             // 
@@ -640,6 +768,21 @@
             this.fluturasSalariiButton.Text = "Fluturaș salarii";
             this.fluturasSalariiButton.UseVisualStyleBackColor = true;
             this.fluturasSalariiButton.Click += new System.EventHandler(this.fluturasSalariiButton_Click);
+            // 
+            // reportViewer
+            // 
+            this.reportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "SalariatiDataSet";
+            reportDataSource1.Value = this.salariatBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "Calculator_Salariu.Reports.StatPlata.StatPlataReport.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(214, 3);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.Size = new System.Drawing.Size(869, 647);
+            this.reportViewer.TabIndex = 0;
+            this.reportViewer.Visible = false;
             // 
             // configurareTab
             // 
@@ -864,149 +1007,6 @@
             this.ajutorToolStripMenuItem.Text = "Ajutor";
             this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
             // 
-            // inchideReportButton
-            // 
-            this.inchideReportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inchideReportButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.inchideReportButton.Location = new System.Drawing.Point(1058, 4);
-            this.inchideReportButton.Name = "inchideReportButton";
-            this.inchideReportButton.Size = new System.Drawing.Size(23, 23);
-            this.inchideReportButton.TabIndex = 3;
-            this.inchideReportButton.Text = "X";
-            this.inchideReportButton.UseVisualStyleBackColor = true;
-            this.inchideReportButton.Visible = false;
-            this.inchideReportButton.Click += new System.EventHandler(this.inchideReportButton_Click);
-            // 
-            // reportViewer
-            // 
-            this.reportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "SalariatiDataSet";
-            reportDataSource1.Value = this.salariatBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "Calculator_Salariu.Reports.StatPlata.StatPlataReport.rdlc";
-            this.reportViewer.Location = new System.Drawing.Point(214, 3);
-            this.reportViewer.Name = "reportViewer";
-            this.reportViewer.Size = new System.Drawing.Size(869, 647);
-            this.reportViewer.TabIndex = 0;
-            this.reportViewer.Visible = false;
-            // 
-            // nrcrtDataGridViewTextBoxColumn
-            // 
-            this.nrcrtDataGridViewTextBoxColumn.DataPropertyName = "Nr_crt";
-            this.nrcrtDataGridViewTextBoxColumn.HeaderText = "Nr. crt.";
-            this.nrcrtDataGridViewTextBoxColumn.Name = "nrcrtDataGridViewTextBoxColumn";
-            // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
-            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            // 
-            // prenumeDataGridViewTextBoxColumn
-            // 
-            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
-            // 
-            // functieDataGridViewTextBoxColumn
-            // 
-            this.functieDataGridViewTextBoxColumn.DataPropertyName = "Functie";
-            this.functieDataGridViewTextBoxColumn.HeaderText = "Funcție";
-            this.functieDataGridViewTextBoxColumn.Name = "functieDataGridViewTextBoxColumn";
-            // 
-            // salariuBazaDataGridViewTextBoxColumn
-            // 
-            this.salariuBazaDataGridViewTextBoxColumn.DataPropertyName = "SalariuBaza";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.salariuBazaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.salariuBazaDataGridViewTextBoxColumn.HeaderText = "Salariu bază";
-            this.salariuBazaDataGridViewTextBoxColumn.Name = "salariuBazaDataGridViewTextBoxColumn";
-            // 
-            // procentSporDataGridViewTextBoxColumn
-            // 
-            this.procentSporDataGridViewTextBoxColumn.DataPropertyName = "ProcentSpor";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.procentSporDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.procentSporDataGridViewTextBoxColumn.HeaderText = "Spor (%)";
-            this.procentSporDataGridViewTextBoxColumn.Name = "procentSporDataGridViewTextBoxColumn";
-            // 
-            // premiiBruteDataGridViewTextBoxColumn
-            // 
-            this.premiiBruteDataGridViewTextBoxColumn.DataPropertyName = "PremiiBrute";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.premiiBruteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.premiiBruteDataGridViewTextBoxColumn.HeaderText = "Premii brute";
-            this.premiiBruteDataGridViewTextBoxColumn.Name = "premiiBruteDataGridViewTextBoxColumn";
-            // 
-            // totalBrutDataGridViewTextBoxColumn
-            // 
-            this.totalBrutDataGridViewTextBoxColumn.DataPropertyName = "TotalBrut";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.totalBrutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.totalBrutDataGridViewTextBoxColumn.HeaderText = "Total brut";
-            this.totalBrutDataGridViewTextBoxColumn.Name = "totalBrutDataGridViewTextBoxColumn";
-            this.totalBrutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // brutImpozabilDataGridViewTextBoxColumn
-            // 
-            this.brutImpozabilDataGridViewTextBoxColumn.DataPropertyName = "BrutImpozabil";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.brutImpozabilDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.brutImpozabilDataGridViewTextBoxColumn.HeaderText = "Brut impozabil";
-            this.brutImpozabilDataGridViewTextBoxColumn.Name = "brutImpozabilDataGridViewTextBoxColumn";
-            this.brutImpozabilDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // impozitDataGridViewTextBoxColumn
-            // 
-            this.impozitDataGridViewTextBoxColumn.DataPropertyName = "Impozit";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.impozitDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.impozitDataGridViewTextBoxColumn.HeaderText = "Impozit";
-            this.impozitDataGridViewTextBoxColumn.Name = "impozitDataGridViewTextBoxColumn";
-            this.impozitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cASDataGridViewTextBoxColumn
-            // 
-            this.cASDataGridViewTextBoxColumn.DataPropertyName = "CAS";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.cASDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.cASDataGridViewTextBoxColumn.HeaderText = "CAS";
-            this.cASDataGridViewTextBoxColumn.Name = "cASDataGridViewTextBoxColumn";
-            this.cASDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cASSDataGridViewTextBoxColumn
-            // 
-            this.cASSDataGridViewTextBoxColumn.DataPropertyName = "CASS";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.cASSDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.cASSDataGridViewTextBoxColumn.HeaderText = "CASS";
-            this.cASSDataGridViewTextBoxColumn.Name = "cASSDataGridViewTextBoxColumn";
-            this.cASSDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // retineriDataGridViewTextBoxColumn
-            // 
-            this.retineriDataGridViewTextBoxColumn.DataPropertyName = "Retineri";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.retineriDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.retineriDataGridViewTextBoxColumn.HeaderText = "Rețineri";
-            this.retineriDataGridViewTextBoxColumn.Name = "retineriDataGridViewTextBoxColumn";
-            // 
-            // viratCardDataGridViewTextBoxColumn
-            // 
-            this.viratCardDataGridViewTextBoxColumn.DataPropertyName = "ViratCard";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.viratCardDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.viratCardDataGridViewTextBoxColumn.HeaderText = "Virat card";
-            this.viratCardDataGridViewTextBoxColumn.Name = "viratCardDataGridViewTextBoxColumn";
-            this.viratCardDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // salariatBindingSource
-            // 
-            this.salariatBindingSource.DataSource = typeof(Calculator_Salariu.DAL.Model.Salariat);
-            // 
             // CalculatorSalarii
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1016,7 +1016,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "CalculatorSalarii";
             this.Text = "Calculator salarii";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalculatorSalarii_FormClosing);
             this.Load += new System.EventHandler(this.CalculatorSalarii_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.evidentaTab.ResumeLayout(false);
             this.evidentaTab.PerformLayout();
@@ -1035,7 +1037,6 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salariatBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

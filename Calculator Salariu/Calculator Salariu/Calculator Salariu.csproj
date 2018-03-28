@@ -153,6 +153,12 @@
     <EmbeddedResource Include="UI\CalculatorSalarii\Forms\AdaugaSalariat.resx">
       <DependentUpon>AdaugaSalariat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CalculatorSalarii\Forms\Ajutor.resx">
+      <DependentUpon>Ajutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CalculatorSalarii\Forms\Despre.resx">
+      <DependentUpon>Despre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CalculatorSalarii\Forms\ModificaParametrii.resx">
       <DependentUpon>ModificaParametrii.cs</DependentUpon>
     </EmbeddedResource>

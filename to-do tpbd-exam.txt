@@ -1,7 +1,6 @@
 To-do app angajati
 
--ecran ajutor
--ecran despre
+
 -mesaje de eroare/succes/informare
 
 
@@ -16,3 +15,5 @@ Done
 -adaugare poza salariati
 -rapoarte
 -editare individuala salariati
+-ecran ajutor
+-ecran despre

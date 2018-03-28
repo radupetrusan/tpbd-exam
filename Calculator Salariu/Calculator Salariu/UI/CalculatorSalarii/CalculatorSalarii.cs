@@ -25,6 +25,14 @@ namespace Calculator_Salariu
 
         #region Events
 
+        private void CalculatorSalarii_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Doriți să închideți aplicația?", "Ieșire", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
         private void iesireToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Doriți să închideți aplicația?", "Ieșire", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)

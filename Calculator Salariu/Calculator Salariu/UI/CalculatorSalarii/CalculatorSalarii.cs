@@ -42,8 +42,8 @@ namespace Calculator_Salariu
 
                 if (result > 0)
                 {
-                    CalculatorViewModel.IncarcaParametrii();
-                    SyncDataConfigurare();
+                    CalculatorViewModel.IncarcaDatele();
+                    SyncData();
                 }
                 else
                 {
@@ -217,7 +217,7 @@ namespace Calculator_Salariu
                 var directory = AppDomain.CurrentDomain.BaseDirectory;
                 var path = Path.Combine(directory, "Reports\\FluturasSalariu\\FluturasSalariuReport.rdlc");
 
-                ReportUtils.RefreshReport(reportViewer, salariati, path);
+                ReportUtils.RefreshReport(reportViewer, salariati, path, form.An, form.Luna);
 
                 reportViewer.Visible = true;
                 inchideReportButton.Visible = true;
@@ -234,7 +234,7 @@ namespace Calculator_Salariu
                 var directory = AppDomain.CurrentDomain.BaseDirectory;
                 var path = Path.Combine(directory, "Reports\\StatPlata\\StatPlataReport.rdlc");
 
-                ReportUtils.RefreshReport(reportViewer, salariati, path);
+                ReportUtils.RefreshReport(reportViewer, salariati, path, form.An, form.Luna);
 
                 reportViewer.Visible = true;
                 inchideReportButton.Visible = true;
